@@ -1,0 +1,14 @@
+---
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+const loopItems = [...items, ...items];
+---
+
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    {loopItems.map((item) => <span>{item}</span>)}
+  </div>
+</div>

@@ -1,0 +1,25 @@
+---
+import Eyebrow from './Eyebrow.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  accent?: string;
+  lead?: string;
+  tone?: 'light' | 'dark';
+}
+
+const { eyebrow, title, accent, lead, tone = 'dark' } = Astro.props;
+const hasAccentSlot = Astro.slots.has('accent');
+---
+
+<div class="section-head reveal">
+  <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
+  <h2>
+    {title}
+    {(accent || hasAccentSlot) && ' '}
+    {accent && <span class="k">{accent}</span>}
+    {hasAccentSlot && <span class="k"><slot name="accent" /></span>}
+  </h2>
+  {lead && <p class="lead">{lead}</p>}
+</div>

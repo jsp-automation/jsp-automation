@@ -1,0 +1,438 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import Badge from '../components/Badge.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import SectionHead from '../components/SectionHead.astro';
+import SpecList from '../components/SpecList.astro';
+import MetricTile from '../components/MetricTile.astro';
+import ProductCard from '../components/ProductCard.astro';
+import DevCard from '../components/DevCard.astro';
+import Marquee from '../components/Marquee.astro';
+import DetectionFrame from '../components/DetectionFrame.astro';
+import PointCloud from '../components/PointCloud.astro';
+import hero from '../assets/provisional/hero.jpg';
+import cell from '../assets/provisional/cell.jpg';
+import awp from '../assets/provisional/awp.jpg';
+import render from '../assets/provisional/render.jpg';
+import glue2 from '../assets/provisional/glue2.jpg';
+
+const marqueeItems = [
+  'Paletizado',
+  'Despaletizado',
+  'Visión 3D',
+  'Control de calidad IA',
+  'Cobots',
+  'Maquinaria a medida',
+  'Software industrial',
+];
+
+const awpSpecs = [
+  { label: 'Carga útil', value: '40 kg' },
+  { label: 'Cadencia', value: '10 ciclos/min' },
+  { label: 'Alcance', value: '1.980 mm' },
+  { label: 'Palet máx.', value: '1.400×1.200 mm' },
+  { label: 'Altura palet', value: '2.650 mm' },
+  { label: 'Potencia', value: '3,5 kW · 220 V' },
+];
+---
+
+<Base title="JSP Automation — Sistema de diseño" description="Styleguide de componentes del sistema de diseño JSP Automation.">
+  <div class="grain" aria-hidden="true"></div>
+  <Header />
+
+  <main id="top">
+    <section class="sg-hero" data-nav="dark">
+      <div class="sg-hero-bg" data-plx="0.12">
+        <Image src={hero} alt="Robot colaborativo GlueArm integrado en inyectora de calzado" loading="eager" />
+      </div>
+      <div class="sg-hero-shade"></div>
+      <div class="sg-hero-frame" aria-hidden="true">
+        <DetectionFrame>
+          <span></span>
+        </DetectionFrame>
+        <div class="sg-frame-tag">COBOT 6 EJES · REPETIBILIDAD ±0,02 MM</div>
+      </div>
+      <div class="wrap sg-hero-content">
+        <Eyebrow>Robótica · Visión artificial · Automatización</Eyebrow>
+        <h1>
+          Automatizamos<br />
+          lo que frena<br />
+          <span class="k">tu producción.</span>
+        </h1>
+        <p class="sg-hero-sub">Diseñamos, fabricamos e instalamos soluciones robotizadas partiendo del proceso real de tu planta. Sin catálogos genéricos.</p>
+        <div class="sg-actions">
+          <Button href="#contacto">Cuéntanos tu proceso</Button>
+          <Button href="#soluciones" variant="ghost" showArrow={false}>Ver soluciones</Button>
+        </div>
+      </div>
+    </section>
+
+    <Marquee items={marqueeItems} />
+
+    <section class="sg-section sg-light" data-nav="light">
+      <div class="wrap">
+        <SectionHead
+          eyebrow="Propuesta de valor"
+          title="No vendemos robots."
+          accent="Resolvemos procesos."
+          lead="Cada solución JSP parte de un análisis real del proceso del cliente. Adaptamos, fabricamos e instalamos sin intermediarios."
+        />
+        <div class="sg-base-grid reveal">
+          <div>
+            <Eyebrow tone="dark">Soluciones</Eyebrow>
+            <h3>Productos propios. <span class="k">Adaptados a tu línea.</span></h3>
+            <p>Conocemos los procesos desde dentro, no desde un pliego de condiciones.</p>
+          </div>
+          <div class="sg-stack">
+            <Badge>Disponible comercialmente</Badge>
+            <Badge variant="avail-dark">Caso real · en producción desde 2022</Badge>
+            <Badge variant="dev">En desarrollo — 2025/26</Badge>
+          </div>
+          <div class="sg-stack">
+            <Button href="#contacto">Pedir estudio de mi línea</Button>
+            <Button href="#proyectos" variant="ghost" showArrow={false}>Ver solución</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="soluciones" class="sg-section sg-light" data-nav="light">
+      <div class="wrap">
+        <ProductCard
+          title="Celda Compacta AWP·40L"
+          text="Paletizado al final de tu línea. Se instala, recoge las cajas y las coloca automáticamente sobre el palet. Sin obras. Sin programación compleja."
+          badge="Disponible comercialmente"
+          specs={awpSpecs}
+          href="#contacto"
+        >
+          <Image slot="media" src={awp} alt="Celda compacta de paletizado AWP·40L de JSP Automation" />
+        </ProductCard>
+      </div>
+    </section>
+
+    <section class="sg-section sg-dark" data-nav="dark">
+      <div class="wrap">
+        <SectionHead
+          eyebrow="Caso real · en producción desde 2022"
+          title="GlueArm."
+          accent="Encolado robotizado de plantillas."
+          lead="Brazo colaborativo con aplicador de diseño propio, integrado sobre la inyectora existente del cliente. Sin obras. Sin paradas de producción."
+          tone="light"
+        />
+        <div class="sg-dark-grid">
+          <DetectionFrame className="sg-photo reveal">
+            <Image src={glue2} alt="GlueArm encolando una plantilla dentro de la inyectora" />
+          </DetectionFrame>
+          <div class="sg-metrics reveal">
+            <MetricTile count={25} prefix="+" suffix="%" label="Producción" />
+            <MetricTile count={60} prefix="−" suffix="%" label="Pegamento" />
+            <MetricTile count={0} label="Quemaduras" />
+            <MetricTile count={4} prefix="×" label="Unidades" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="sg-section sg-dark" data-nav="dark">
+      <div class="wrap">
+        <SectionHead
+          eyebrow="Soluciones"
+          title="En desarrollo."
+          accent="Visión e IA aplicadas al palet."
+          tone="light"
+        />
+        <div class="sg-dev-grid">
+          <DevCard
+            badge="En desarrollo — 2025/26"
+            title="Paletizador Caótico IA"
+            text="Cajas de distintos formatos y pesos, colocadas en el palet de forma óptima en tiempo real. Visión 2D/3D y rotación dinámica."
+          >
+            <Image slot="media" src={render} alt="Simulación 3D del paletizador caótico con IA" />
+          </DevCard>
+          <DevCard
+            badge="En desarrollo — 2026"
+            title="Despaletizado por Visión IA"
+            text="El robot ve el palet. Entiende cómo viene. Actúa. Funciona con pallets reales, tal como llegan del proveedor."
+          >
+            <PointCloud slot="media" width={620} height={560} />
+          </DevCard>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" class="sg-section sg-light" data-nav="light">
+      <div class="wrap sg-two">
+        <SectionHead
+          eyebrow="Cómo trabajamos"
+          title="Proyectos por fases."
+          accent="Cobro por objetivos."
+          lead="No vendemos maquinaria: vendemos soluciones funcionando."
+        />
+        <div class="sg-panel reveal">
+          <SpecList
+            rows={[
+              { label: 'FASE 1 / 5', value: 'Definición del proyecto' },
+              { label: 'FASE 2 / 5', value: 'Diseño e integración' },
+              { label: 'FASE 3 / 5', value: 'Instalación y puesta en marcha' },
+              { label: 'FASE 4 / 5', value: 'Ajustes en producción real' },
+              { label: 'FASE 5 / 5', value: 'Validación final del cliente' },
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="sg-section sg-contact" data-nav="light">
+      <div class="wrap reveal">
+        <Eyebrow tone="dark">Contacto</Eyebrow>
+        <h2>Cuéntanos <span class="k">tu proceso.</span></h2>
+        <p class="lead">Te decimos en días si podemos mejorarlo. Estudio técnico-comercial sin compromiso.</p>
+        <Button href="#">Empezar la conversación</Button>
+      </div>
+    </section>
+
+    <section class="sg-section sg-light" data-nav="light">
+      <div class="wrap">
+        <DetectionFrame className="sg-wide-frame reveal">
+          <Image src={cell} alt="Célula encoladora GlueArm en el taller" />
+        </DetectionFrame>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  .sg-hero {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    background: var(--dark);
+    color: #fff;
+  }
+
+  .sg-hero-bg {
+    position: absolute;
+    inset: -6% 0;
+    will-change: transform;
+  }
+
+  .sg-hero-bg :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 40%;
+    filter: saturate(.92) contrast(1.04);
+    animation: kb 26s ease-in-out infinite alternate;
+  }
+
+  .sg-hero-shade {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(75deg, rgba(8, 9, 12, .92) 0%, rgba(8, 9, 12, .55) 38%, rgba(8, 9, 12, .12) 68%),
+      linear-gradient(0deg, rgba(8, 9, 12, .9) 0%, transparent 38%),
+      linear-gradient(180deg, rgba(8, 9, 12, .5), transparent 26%);
+  }
+
+  .sg-hero-frame {
+    position: absolute;
+    top: 14%;
+    right: 4%;
+    width: min(46vw, 560px);
+    aspect-ratio: 4 / 3;
+    opacity: 0;
+    animation: fadein 1.6s 1.1s forwards;
+  }
+
+  .sg-hero-frame .detection-frame,
+  .sg-hero-frame .detection-frame span {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sg-frame-tag {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    padding: 6px 12px;
+    border: 1px solid rgba(70, 190, 212, .3);
+    border-radius: 8px;
+    background: rgba(11, 12, 15, .55);
+    color: var(--cyan);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    white-space: nowrap;
+    backdrop-filter: blur(6px);
+  }
+
+  .sg-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: clamp(150px, 24vh, 230px);
+    padding-bottom: 96px;
+  }
+
+  .sg-hero-content h1 {
+    max-width: 11ch;
+    margin: 22px 0 24px;
+    color: #fff;
+  }
+
+  .sg-hero-sub {
+    max-width: 44ch;
+    color: #C4C8CE;
+    font-size: clamp(16px, 1.4vw, 19px);
+    font-weight: 300;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, .5);
+  }
+
+  .sg-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .sg-section {
+    padding: clamp(92px, 10vw, 150px) 0;
+  }
+
+  .sg-light {
+    background: var(--bg);
+  }
+
+  .sg-dark {
+    background: var(--dark);
+    color: #fff;
+  }
+
+  .sg-dark :global(h2),
+  .sg-dark :global(h3) {
+    color: #fff;
+  }
+
+  .sg-dark :global(.lead) {
+    color: #A6ABB2;
+  }
+
+  .sg-base-grid,
+  .sg-dark-grid,
+  .sg-dev-grid,
+  .sg-two {
+    display: grid;
+    gap: 18px;
+    margin-top: 42px;
+  }
+
+  .sg-base-grid {
+    grid-template-columns: 1.2fr .8fr .8fr;
+    align-items: start;
+  }
+
+  .sg-base-grid p {
+    margin-top: 10px;
+    color: var(--mut);
+  }
+
+  .sg-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .sg-dark-grid {
+    grid-template-columns: 1fr .8fr;
+    align-items: stretch;
+  }
+
+  .sg-photo {
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .sg-photo :global(img),
+  .sg-wide-frame :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sg-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .sg-dev-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sg-two {
+    grid-template-columns: .9fr 1.1fr;
+    align-items: start;
+  }
+
+  .sg-panel {
+    padding: clamp(24px, 4vw, 42px);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--card);
+  }
+
+  .sg-contact {
+    background: radial-gradient(90% 130% at 50% 130%, rgba(70, 190, 212, .16), transparent 62%), linear-gradient(180deg, var(--bg2), var(--bg));
+    text-align: center;
+  }
+
+  .sg-contact :global(.eyebrow) {
+    justify-content: center;
+  }
+
+  .sg-contact :global(.eyebrow)::after {
+    content: "";
+    width: 26px;
+    height: 1.5px;
+    background: currentColor;
+  }
+
+  .sg-contact .lead {
+    margin: 0 auto 34px;
+  }
+
+  .sg-wide-frame {
+    overflow: hidden;
+    min-height: 460px;
+    border-radius: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .sg-hero-frame {
+      display: none;
+    }
+
+    .sg-base-grid,
+    .sg-dark-grid,
+    .sg-dev-grid,
+    .sg-two {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sg-hero-bg :global(img),
+    .sg-hero-frame {
+      animation: none;
+      opacity: 1;
+    }
+  }
+</style>

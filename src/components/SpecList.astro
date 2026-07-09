@@ -1,0 +1,19 @@
+---
+import SpecRow from './SpecRow.astro';
+
+interface SpecItem {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  rows?: SpecItem[];
+}
+
+const { rows = [] } = Astro.props;
+---
+
+<div class="specs">
+  {rows.map((row) => <SpecRow label={row.label} value={row.value} />)}
+  <slot />
+</div>

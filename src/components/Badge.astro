@@ -1,0 +1,12 @@
+---
+interface Props {
+  variant?: 'avail' | 'avail-dark' | 'dev';
+}
+
+const { variant = 'avail' } = Astro.props;
+---
+
+<span class={`badge ${variant}`}>
+  <i aria-hidden="true"></i>
+  <slot />
+</span>

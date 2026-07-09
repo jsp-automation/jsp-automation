@@ -29,5 +29,10 @@ const canonicalHref = new URL(Astro.url.pathname, Astro.site).href;
   </head>
   <body>
     <slot />
+    <script>
+      import { init } from '../scripts/motion';
+
+      init();
+    </script>
   </body>
 </html>

@@ -1,0 +1,36 @@
+---
+import Badge from './Badge.astro';
+
+interface Props {
+  title: string;
+  text: string;
+  badge: string;
+  href?: string;
+  linkText?: string;
+}
+
+const {
+  title,
+  text,
+  badge,
+  href,
+  linkText = 'Ver solución',
+} = Astro.props;
+---
+
+<article class="dev-card reveal">
+  <div class="media">
+    <slot name="media" />
+  </div>
+  <div class="shade"></div>
+  <div class="body">
+    <Badge variant="dev">{badge}</Badge>
+    <h3>{title}</h3>
+    <p>{text}</p>
+    {href ? (
+      <a class="plink" href={href}>{linkText} <span class="arr" aria-hidden="true">→</span></a>
+    ) : (
+      <span class="plink">{linkText} <span class="arr" aria-hidden="true">→</span></span>
+    )}
+  </div>
+</article>

@@ -1,0 +1,43 @@
+---
+import Badge from './Badge.astro';
+import Button from './Button.astro';
+import SpecList from './SpecList.astro';
+
+interface SpecItem {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  title: string;
+  text: string;
+  badge: string;
+  badgeVariant?: 'avail' | 'avail-dark' | 'dev';
+  specs?: SpecItem[];
+  href?: string;
+  cta?: string;
+}
+
+const {
+  title,
+  text,
+  badge,
+  badgeVariant = 'avail',
+  specs = [],
+  href,
+  cta = 'Pedir estudio de mi línea',
+} = Astro.props;
+---
+
+<article class="product-card reveal">
+  <div class="product-card-body">
+    <Badge variant={badgeVariant}>{badge}</Badge>
+    <h3>{title}</h3>
+    <p>{text}</p>
+    {specs.length > 0 && <SpecList rows={specs} />}
+    {href && <Button href={href} className="mt-7">{cta}</Button>}
+  </div>
+  <div class="product-card-media">
+    <slot name="media" />
+  </div>
+</article>

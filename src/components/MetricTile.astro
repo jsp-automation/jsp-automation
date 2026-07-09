@@ -1,0 +1,23 @@
+---
+interface Props {
+  label: string;
+  count?: number;
+  prefix?: string;
+  suffix?: string;
+}
+
+const { label, count, prefix = '', suffix = '' } = Astro.props;
+const hasCounter = typeof count === 'number';
+const value = hasCounter ? `${prefix}0${suffix}` : `${prefix}${suffix}`;
+---
+
+<div class="metric-tile">
+  <b
+    data-count={hasCounter ? count : undefined}
+    data-prefix={hasCounter ? prefix : undefined}
+    data-suffix={hasCounter ? suffix : undefined}
+  >
+    {value}
+  </b>
+  <span>{label}</span>
+</div>

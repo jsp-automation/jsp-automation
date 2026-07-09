@@ -1,0 +1,17 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`detection-frame ${className}`}>
+  <slot />
+  <div class="fr" aria-hidden="true">
+    <i class="tl"></i>
+    <i class="tr"></i>
+    <i class="bl"></i>
+    <i class="br"></i>
+  </div>
+</div>

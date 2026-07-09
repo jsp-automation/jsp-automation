@@ -1,0 +1,23 @@
+---
+interface Props {
+  width?: number;
+  height?: number;
+  className?: string;
+  label?: string;
+}
+
+const {
+  width = 620,
+  height = 560,
+  className = '',
+  label = 'Nube de puntos 3D de un palet escaneado por visión artificial',
+} = Astro.props;
+---
+
+<canvas
+  class={`point-cloud ${className}`}
+  data-point-cloud
+  width={width}
+  height={height}
+  aria-label={label}
+></canvas>
