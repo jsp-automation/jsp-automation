@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import es from '../i18n/es.json';
+---
+
+<Base title={es.meta.title} description={es.meta.description}>
+  <main class="min-h-dvh px-6 py-10 md:px-10">
+    <section class="mx-auto flex min-h-[calc(100dvh-5rem)] max-w-5xl items-center">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl font-semibold leading-[1.02] text-ink md:text-7xl">
+          {es.home.title}
+          <span class="block text-cyan">{es.home.titleAccent}</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-ink-soft md:text-xl">
+          {es.home.lead}
+        </p>
+        <button
+          type="button"
+          class="mt-9 inline-flex min-h-12 items-center justify-center rounded-md bg-cyan px-6 text-base font-semibold text-dark transition hover:bg-cyan-hi focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-deep"
+        >
+          {es.home.cta}
+        </button>
+      </div>
+    </section>
+  </main>
+</Base>

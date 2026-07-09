@@ -1,0 +1,21 @@
+{
+  "name": "jsp-automation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "latest",
+    "@fontsource-variable/dm-sans": "latest",
+    "astro": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

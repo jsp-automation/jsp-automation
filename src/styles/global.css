@@ -1,0 +1,92 @@
+@import '@fontsource-variable/dm-sans';
+@import 'tailwindcss';
+
+:root {
+  --bg: #F5F6F8;
+  --bg2: #EDEFF2;
+  --card: #FFFFFF;
+  --ink: #141519;
+  --ink-soft: #3C3D42;
+  --mut: #6E7278;
+  --cyan: #46BED4;
+  --cyan-hi: #5FD4E8;
+  --cyan-deep: #2496B0;
+  --cyan-ghost: #E2F4F8;
+  --line: #E2E4E9;
+  --dark: #0B0C0F;
+  --dark-2: #131519;
+  --dark-mut: #8B9097;
+  --amber: #C89530;
+  --amber-bg: rgba(200,149,48,.12);
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mut: var(--mut);
+  --color-cyan: var(--cyan);
+  --color-cyan-hi: var(--cyan-hi);
+  --color-cyan-deep: var(--cyan-deep);
+  --color-cyan-ghost: var(--cyan-ghost);
+  --color-line: var(--line);
+  --color-dark: var(--dark);
+  --color-dark-2: var(--dark-2);
+  --color-dark-mut: var(--dark-mut);
+  --color-amber: var(--amber);
+  --color-amber-bg: var(--amber-bg);
+  --font-sans: 'DM Sans Variable', 'DM Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'DM Sans Variable', 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink-soft);
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}

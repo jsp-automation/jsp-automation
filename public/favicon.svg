@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JSP Automation">
+  <rect width="64" height="64" rx="12" fill="#F5F6F8" />
+  <path d="M16 40h20c6.6 0 12-5.4 12-12S42.6 16 36 16H16v8h20a4 4 0 0 1 0 8H16v8Z" fill="#141519" />
+  <path d="M44 48a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" fill="#46BED4" />
+</svg>
