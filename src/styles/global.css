@@ -206,6 +206,12 @@ h3 {
   margin-right: auto;
 }
 
+.brand-logo {
+  width: auto;
+  height: 40px;
+  flex: 0 0 auto;
+}
+
 .brand-name {
   color: #fff;
   font-size: 17px;
@@ -781,6 +787,18 @@ h3 {
   gap: 20px;
   color: var(--mut);
   font-size: 13.5px;
+}
+
+.foot-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo {
+  width: auto;
+  height: 48px;
+  flex: 0 0 auto;
 }
 
 @keyframes kb {

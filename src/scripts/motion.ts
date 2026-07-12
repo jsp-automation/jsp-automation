@@ -16,7 +16,6 @@ export function initHeader() {
   header.dataset.ready = 'true';
   const toggle = header.querySelector<HTMLButtonElement>('[data-menu-toggle]');
   const menu = header.querySelector<HTMLElement>('[data-mobile-menu]');
-  const logoInk = header.querySelectorAll<SVGElement>('[data-logo-ink]');
 
   const applyTheme = () => {
     const probeY = Math.round(header.getBoundingClientRect().height / 2);
@@ -32,7 +31,6 @@ export function initHeader() {
     const onDark = theme === 'dark';
     header.classList.toggle('on-dark', onDark);
     header.classList.toggle('on-light', !onDark);
-    logoInk.forEach((node) => node.setAttribute('stroke', onDark ? '#fff' : '#141519'));
   };
 
   const closeMenu = () => {

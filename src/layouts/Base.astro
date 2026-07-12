@@ -25,7 +25,8 @@ const canonicalHref = new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:url" content={canonicalHref} />
     <meta property="og:site_name" content="JSP Automation" />
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
   <body>
     <slot />

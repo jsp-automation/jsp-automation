@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import jspLogo from '../assets/brand/jsp-logo.png';
+
 interface Props {
   note?: string;
   copyright?: string;
@@ -9,7 +12,10 @@ const { note = 'Robótica, visión artificial y automatización industrial', cop
 
 <footer class="site-footer">
   <div class="wrap foot">
-    <div>{copyright}</div>
+    <div class="foot-brand">
+      <Image class="footer-logo" src={jspLogo} alt="JSP Automation" />
+      <div>{copyright}</div>
+    </div>
     <div>{note}</div>
   </div>
 </footer>
