@@ -11,7 +11,7 @@ import cellImg from '../assets/provisional/cell.jpg';
 import glueImg from '../assets/provisional/glue2.jpg';
 
 const navItems = [
-  { label: es.nav.soluciones, href: '#soluciones' },
+  { label: es.nav.soluciones, href: '/soluciones/' },
   { label: es.nav.proyectos, href: '#caso' },
   { label: es.nav.metodo, href: '#metodo' },
   { label: es.nav.empresa, href: '#' },
@@ -37,7 +37,7 @@ const navItems = [
           <p class="hero-sub">{es.hero.sub}</p>
           <div class="hero-cta">
             <a class="pill" href="#contacto">{es.hero.ctaPrimary} <span class="arr">→</span></a>
-            <a class="pill pill-ghost" href="#soluciones">{es.hero.ctaSecondary}</a>
+            <a class="pill pill-ghost" href="/soluciones/">{es.hero.ctaSecondary}</a>
           </div>
         </div>
       </div>
@@ -69,13 +69,15 @@ const navItems = [
           <h2>{es.products.titleLine1}<br>{es.products.titleLine2}</h2>
           <p class="lead">{es.products.lead}</p>
         </div>
-        {es.products.items.map((p) => (
-          <div class="prow reveal">
+        {es.products.items.map((p, index) => {
+          const href = index === 0 || index === 2 ? '/soluciones/paletizado/' : index === 3 ? '/soluciones/despaletizado/' : undefined;
+          const Tag = href ? 'a' : 'div';
+          return <Tag class:list={["prow", "reveal", { "prow-static": !href }]} href={href}>
             <h3>{p.name}</h3>
             <p>{p.desc}</p>
-            <span class="go" aria-hidden="true">→</span>
-          </div>
-        ))}
+            {href && <span class="go" aria-hidden="true">→</span>}
+          </Tag>;
+        })}
       </div>
     </section>
 

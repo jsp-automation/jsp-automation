@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import es from '../i18n/es.json';
+
+interface Props { content: typeof es.solutions.paletizado | typeof es.solutions.despaletizado; heroImage: ImageMetadata; }
+const { content, heroImage } = Astro.props;
+const navItems = [
+  { label: es.nav.soluciones, href: '/soluciones/' },
+  { label: es.nav.proyectos, href: '/#caso' },
+  { label: es.nav.metodo, href: '/#metodo' },
+  { label: es.nav.empresa, href: '/#' },
+];
+---
+<Base title={content.meta.title} description={content.meta.description}>
+  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/#contacto" />
+  <div class="act-dark solution-act" id="top">
+    <section class="hero solution-hero">
+      <div class="hero-media"><Image src={heroImage} alt={content.hero.imageAlt} widths={[760, 1200, 1600]} sizes="100vw" loading="eager" fetchpriority="high" quality={80} /></div>
+      <div class="hero-inner"><div class="wrap">
+        <div class="hero-eyebrow">{content.hero.eyebrow}</div>
+        <h1><span class="l"><i>{content.hero.title}</i></span></h1>
+        <p class="hero-sub">{content.hero.sub}</p>
+        <div class="hero-cta"><a class="pill" href="/#contacto">{es.nav.cta} <span class="arr">→</span></a><a class="pill pill-ghost" href="/soluciones/">{es.solutions.common.all}</a></div>
+      </div></div>
+    </section>
+  </div>
+  <main class="act-light solution-light">
+    <section class="wrap solution-section problems">
+      <div class="sec-label">{content.problems.title}</div>
+      <div class="problem-list">{content.problems.items.map((item) => <div class="problem reveal"><h3>{item.title}</h3><p>{item.description}</p></div>)}</div>
+    </section>
+    <slot name="specific" />
+    <section class="wrap method solution-section">
+      <div class="reveal"><div class="sec-label">{content.approach.label}</div><h2>{content.approach.title}</h2></div>
+      <div class="steps">{content.approach.steps.map((step) => <div class="step reveal"><span class="n">{step.n}</span><h3>{step.h}</h3><p>{step.p}</p></div>)}</div>
+    </section>
+    <section class="wrap solution-section faq">
+      <div class="sec-label">{es.solutions.common.faq}</div><h2>{content.faq.title}</h2>
+      <div class="faq-list reveal">{content.faq.items.map((item) => <details><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
+    </section>
+    <section class="wrap cta-final cta-compact" id="contacto"><div class="reveal"><div class="sec-label">{es.solutions.common.contact}</div><h2>{content.cta.title}</h2><p class="lead">{content.cta.text}</p><a class="pill" href="/#contacto">{content.cta.button} <span class="arr">→</span></a></div></section>
+    <Footer note={es.footer.note} />
+  </main>
+</Base>

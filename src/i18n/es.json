@@ -94,6 +94,61 @@
       { "label": "Email", "value": "ingenieria@jsp-automation.es" }
     ]
   },
+  "solutions": {
+    "common": { "all": "Ver todas las soluciones", "system": "Sistema", "development": "Desarrollo", "faq": "FAQ", "contact": "Contacto" },
+    "hub": {
+      "meta": { "title": "Soluciones | JSP Automation", "description": "Paletizado, despaletizado, visión artificial y control de calidad. Soluciones robotizadas diseñadas y fabricadas por JSP Automation." },
+      "label": "Soluciones",
+      "title": "Cada sistema se adapta a tu proceso. No al revés.",
+      "items": [
+        { "name": "Paletizado (AWP·40L)", "desc": "Paletizado al final de tu línea: 40 kg, 10 ciclos/min, sin obras ni programación compleja.", "href": "/soluciones/paletizado/" },
+        { "name": "Despaletizado por Visión IA", "desc": "El robot ve el palet, entiende cómo viene y actúa. Con pallets reales, tal como llegan.", "href": "/soluciones/despaletizado/" },
+        { "name": "GlueArm", "desc": "Encolado robotizado de plantillas con aplicador de diseño propio, integrado en la inyectora existente." },
+        { "name": "Paletizador Caótico IA", "desc": "Cajas de distintos formatos colocadas de forma óptima en tiempo real, con visión 2D/3D." },
+        { "name": "Control de Calidad IA", "desc": "Inspección del 100 % de la producción con cámaras industriales y modelos entrenados para calzado." }
+      ],
+      "cta": { "label": "Contacto", "title": "¿Qué proceso quieres automatizar?", "text": "Cuéntanos dónde se frena tu producción. Te decimos en días si podemos mejorarlo.", "button": "Cuéntanos tu proceso" }
+    },
+    "paletizado": {
+      "meta": { "title": "Paletizado robotizado | JSP Automation", "description": "Celdas de paletizado robotizado que se instalan sin obras y se manejan desde pantalla táctil. Diseñadas y fabricadas por JSP Automation." },
+      "hero": { "eyebrow": "Soluciones · Paletizado", "title": "Paletizado al final de tu línea. Nada más.", "sub": "Celdas de paletizado robotizado que se instalan sin obras y se manejan desde una pantalla táctil. Diseñadas y fabricadas por JSP.", "imageAlt": "Celda compacta de paletizado AWP·40L" },
+      "problems": { "title": "¿Te suena?", "items": [
+        { "title": "Cajas a mano al final de la línea", "description": "Un puesto físico, repetitivo y con riesgo de lesiones que además es difícil de cubrir." },
+        { "title": "Rotación constante en el puesto", "description": "Cada cambio de persona implica volver a formar y volver a perder ritmo." },
+        { "title": "Picos de producción que no absorbes", "description": "La línea produce más de lo que el final de línea es capaz de paletizar." },
+        { "title": "Cambios de formato frecuentes", "description": "Cada referencia nueva obliga a reprogramar o a volver al paletizado manual." }
+      ] },
+      "product": { "title": "Celda Compacta AWP·40L", "intro": "La celda se instala al final de la línea, recoge las cajas y las coloca automáticamente sobre el palet. Sin obras. Sin programación compleja. El cambio de formato se hace desde la pantalla táctil, con recetas guardadas.", "imageAlt": "Celda Compacta AWP·40L de paletizado robotizado", "specs": [
+        { "label": "Carga útil", "value": "40 kg" }, { "label": "Cadencia", "value": "hasta 10 ciclos/min" }, { "label": "Alcance", "value": "1.980 mm" }, { "label": "Palet máx.", "value": "1.400 × 1.200 mm" }, { "label": "Altura palet", "value": "2.650 mm" }, { "label": "Potencia", "value": "3,5 kW · 220 V" }
+      ], "features": ["Plug & play — instalación sin rediseñar la fábrica", "Robot colaborativo — sin vallado, seguro junto al operario", "Recetas guardadas — cambio de formato desde pantalla táctil", "Palets a ambos lados — flexibilidad de layout en planta"] },
+      "additional": { "title": "Y para líneas con formatos mezclados", "text": "Estamos desarrollando un paletizador caótico con inteligencia artificial: cajas de distintos formatos y pesos colocadas en el palet de forma óptima en tiempo real, con visión 2D/3D y rotación dinámica. Es un desarrollo en curso sobre la base probada de nuestra celda de paletizado: si tu línea trabaja con formatos mixtos, cuéntanos tu caso y valoramos si encaja en el programa de desarrollo.", "imageAlt": "Render 3D del paletizador caótico con inteligencia artificial" },
+      "approach": { "label": "Método", "title": "Cómo lo abordamos", "steps": [
+        { "n": "01", "h": "Estudiamos tu final de línea", "p": "Formatos, pesos, cadencia por turno, espacio disponible y restricciones." }, { "n": "02", "h": "Validamos la viabilidad", "p": "Cálculo de ciclos y simulación del patrón de paletizado antes de proponerte nada." }, { "n": "03", "h": "Instalamos sin obras", "p": "La celda llega montada, se posiciona y se conecta. Sin parar tu producción." }, { "n": "04", "h": "Ajustamos en producción real", "p": "Optimización de ciclos y formatos con tu producto y tu ritmo reales." }
+      ] },
+      "faq": { "title": "Preguntas frecuentes", "items": [
+        { "question": "¿Necesita vallado de seguridad?", "answer": "La celda usa un robot colaborativo diseñado para trabajar junto a personas. La necesidad de medidas adicionales se determina en la evaluación de riesgos de tu aplicación concreta, que forma parte del proyecto." }, { "question": "¿Cuánto espacio necesita?", "answer": "La celda es compacta y admite palets a ambos lados para adaptarse a tu layout. Con un plano o unas fotos de tu final de línea te confirmamos el encaje." }, { "question": "¿Qué pasa cuando cambio de formato?", "answer": "Los formatos se guardan como recetas y se cambian desde la pantalla táctil, sin programar y sin técnico." }
+      ] },
+      "cta": { "title": "¿Tu final de línea se ha quedado corto?", "text": "Cuéntanos formatos, pesos y cadencia. Te decimos en días si la celda encaja en tu línea.", "button": "Cuéntanos tu proceso" }
+    },
+    "despaletizado": {
+      "meta": { "title": "Despaletizado automático con visión 3D | JSP Automation", "description": "Sistema de despaletizado por visión artificial e IA: el robot detecta la posición real de cada caja y la extrae de forma autónoma, sin posiciones preprogramadas." },
+      "hero": { "eyebrow": "Soluciones · Despaletizado", "title": "El robot ve el palet. Entiende cómo viene. Actúa.", "sub": "Despaletizado por visión 3D e inteligencia artificial: detecta la posición y orientación reales de cada caja y las extrae de forma autónoma. Sin posiciones preprogramadas.", "imageAlt": "Celda robotizada de despaletizado con visión 3D" },
+      "problems": { "title": "¿Te suena?", "items": [
+        { "title": "Los pallets no llegan perfectos", "description": "Cada proveedor paletiza a su manera: alturas distintas, capas incompletas, cajas giradas." }, { "title": "Los sistemas convencionales exigen pallets iguales", "description": "Si el palet no coincide con el patrón programado, el sistema se detiene." }, { "title": "Despaletizar a mano castiga", "description": "Cargas repetidas por encima del hombro y por debajo de la rodilla, turno tras turno." }
+      ] },
+      "operation": { "title": "Cómo funciona", "steps": [
+        { "n": "01", "h": "Escaneo", "p": "Una cámara 3D industrial escanea el palet al inicio de cada ciclo." }, { "n": "02", "h": "Detección IA", "p": "El sistema identifica la posición y orientación de cada caja, tal como está realmente." }, { "n": "03", "h": "Planificación", "p": "Calcula la secuencia óptima de extracción en tiempo real." }, { "n": "04", "h": "Ejecución", "p": "El robot extrae cada caja con agarre adaptativo." }
+      ] },
+      "status": { "title": "En qué punto está", "text": "El sistema está en fase de desarrollo, con la arquitectura técnica definida sobre la base probada de nuestro sistema de paletizado: robot colaborativo de 6 ejes, cámara 3D industrial y detección en tiempo real, sin posiciones preprogramadas. Si tu planta recibe pallets heterogéneos, tu caso nos interesa: los primeros proyectos definirán el producto." },
+      "approach": { "label": "Método", "title": "Cómo lo abordamos", "steps": [
+        { "n": "01", "h": "Entendemos tu recepción de mercancía", "p": "Qué recibes, de cuántos proveedores, con qué variabilidad real." }, { "n": "02", "h": "Analizamos tu producto", "p": "Dimensiones, pesos, tipos de caja y estado de los pallets al llegar." }, { "n": "03", "h": "Validamos la detección con tus datos", "p": "Pruebas de visión con fotos y muestras reales de tus pallets." }, { "n": "04", "h": "Definimos el proyecto contigo", "p": "Alcance, celda y criterios de aceptación acordados antes de construir." }
+      ] },
+      "faq": { "title": "Preguntas frecuentes", "items": [
+        { "question": "¿Funciona con pallets de distintos proveedores?", "answer": "Ese es exactamente el problema que ataca: el sistema detecta cada caja tal como llega, sin depender de un patrón fijo." }, { "question": "¿Qué necesitáis saber de mi caso?", "answer": "Dimensiones y pesos de las cajas, y fotos o un vídeo corto de cómo llegan tus pallets. Con eso hacemos una primera valoración." }, { "question": "¿Cuándo estará disponible?", "answer": "Es un desarrollo en curso. Trabajamos con casos reales para definirlo: si el tuyo encaja, te lo decimos con claridad y sin compromiso." }
+      ] },
+      "cta": { "title": "¿Recibes pallets que no hay quien automatice?", "text": "Mándanos fotos de cómo llegan. Te decimos en días si nuestra visión 3D puede con ellos.", "button": "Cuéntanos tu proceso" }
+    }
+  },
   "footer": {
     "copyright": "© 2026 JSP Automation · España",
     "note": "Robótica, visión artificial y automatización industrial"

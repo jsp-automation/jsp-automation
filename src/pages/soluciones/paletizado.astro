@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import Solution from '../../layouts/Solution.astro';
+import es from '../../i18n/es.json';
+import awpImg from '../../assets/provisional/awp.jpg';
+import renderImg from '../../assets/provisional/render.jpg';
+const content = es.solutions.paletizado;
+---
+<Solution content={content} heroImage={awpImg}>
+  <div slot="specific">
+    <section class="wrap case solution-product">
+      <div class="media reveal"><Image src={awpImg} alt={content.product.imageAlt} widths={[600, 900]} sizes="(max-width: 860px) 100vw, 50vw" quality={82} /></div>
+      <div class="reveal"><div class="sec-label">{es.solutions.common.system}</div><h2>{content.product.title}</h2><p class="lead">{content.product.intro}</p><div class="specs">{content.product.specs.map((spec) => <div class="spec"><span>{spec.label}</span><b>{spec.value}</b></div>)}</div><ul class="feature-list">{content.product.features.map((feature) => <li>{feature}</li>)}</ul></div>
+    </section>
+    <section class="wrap case solution-extra">
+      <div class="media reveal"><Image src={renderImg} alt={content.additional.imageAlt} widths={[600, 900]} sizes="(max-width: 860px) 100vw, 50vw" quality={82} /></div>
+      <div class="reveal"><div class="sec-label">{es.solutions.common.development}</div><h2>{content.additional.title}</h2><p class="lead">{content.additional.text}</p></div>
+    </section>
+  </div>
+</Solution>

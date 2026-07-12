@@ -842,6 +842,48 @@ h3 {
   }
 }
 
+/* Páginas de solución y hub */
+.solution-act { margin-bottom: 0; }
+.solution-hero { min-height: min(62svh, 700px); }
+.solution-hero h1 { max-width: 15ch; font-size: clamp(46px, 5.8vw, 86px); }
+.solution-light { padding-top: clamp(80px, 10vw, 130px); }
+.solution-section { max-width: 1000px; padding-top: clamp(70px, 9vw, 120px); padding-bottom: clamp(70px, 9vw, 120px); }
+.problems { padding-top: 0; }
+.problem-list { margin-top: clamp(36px, 5vw, 56px); }
+.problem { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr); gap: clamp(20px, 5vw, 70px); padding: 27px 0; border-top: 1px solid var(--line); }
+.problem:last-child { border-bottom: 1px solid var(--line); }
+.problem h3 { color: var(--ink); font-size: 18px; }
+.problem p { color: var(--mut); font-size: 15px; }
+.solution-product, .solution-extra { padding-top: clamp(70px, 9vw, 120px); padding-bottom: clamp(70px, 9vw, 120px); }
+.specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 30px; border-top: 1px solid var(--line); }
+.spec { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.spec span, .spec b { display: block; }
+.spec span { color: var(--mut); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.spec b { color: var(--ink); font-size: 16px; font-weight: 600; }
+.feature-list { margin: 28px 0 0; padding: 0; list-style: none; }
+.feature-list li { padding: 13px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 14px; }
+.prose-block .lead { max-width: 72ch; }
+.faq h2 { margin-bottom: 38px; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { padding: 24px 42px 24px 0; color: var(--ink); font-weight: 600; cursor: pointer; }
+.faq-list details p { max-width: 70ch; margin: 0; padding: 0 0 26px; color: var(--mut); font-size: 15px; }
+.cta-compact { padding-top: clamp(55px, 7vw, 90px); padding-bottom: clamp(70px, 9vw, 110px); }
+.cta-compact h2 { font-size: clamp(40px, 5vw, 72px); }
+.hub-page { padding-top: clamp(160px, 18vw, 230px); background: linear-gradient(180deg, var(--canvas), var(--canvas-2) 70%, var(--canvas)); }
+.hub-solutions h1 { max-width: 14ch; margin: 18px 0 clamp(55px, 7vw, 90px); color: var(--ink); }
+.hub-rows .prow { border-color: var(--line); }
+.hub-rows .prow:last-child { border-bottom-color: var(--line); }
+.hub-rows .prow:hover { background: rgba(20, 21, 25, .025); }
+.hub-rows .prow h3 { color: var(--ink); }
+.hub-rows .prow p { color: var(--mut); }
+.prow-static { cursor: default; }
+.prow-static:hover { padding-left: 0; background: transparent; }
+@media (max-width: 700px) {
+  .problem { grid-template-columns: 1fr; gap: 8px; }
+  .specs { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 900px) {
   .nav-links,
   .site-header .btn-nav {
