@@ -21,6 +21,7 @@ const navItems = [
 <Base title={es.meta.title} description={es.meta.description}>
   <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/contacto/" />
 
+  <main id="contenido">
   <!-- ACTO I : mundo oscuro continuo -->
   <div class="act-dark" id="top">
     <section class="hero">
@@ -157,11 +158,7 @@ const navItems = [
       </div>
     </section>
 
-    <Footer note={es.footer.note} />
   </div>
-
-  <script>
-    import { init } from '../scripts/motion';
-    init();
-  </script>
+  </main>
+  <Footer note={es.footer.note} />
 </Base>

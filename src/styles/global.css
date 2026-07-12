@@ -1,6 +1,20 @@
-@import '@fontsource-variable/dm-sans';
-@import '@fontsource/dm-serif-display';
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'DM Sans Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url('@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('@fontsource/dm-serif-display/files/dm-serif-display-latin-400-normal.woff2') format('woff2');
+}
 
 :root {
   --canvas: #F6F6F4;
@@ -18,7 +32,7 @@
   --card: #FFFFFF;
   --ink: #141519;
   --ink-soft: #3C3D42;
-  --mut: #6E7278;
+  --mut: #6D7177;
   --cyan: #46BED4;
   --cyan-hi: #5FD4E8;
   --cyan-deep: #2496B0;
@@ -59,6 +73,7 @@
 
 html {
   min-height: 100%;
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,6 +105,28 @@ svg {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--cyan-deep);
+  outline-offset: 4px;
 }
 
 button,
@@ -1025,7 +1062,7 @@ h3, .display-3 {
 }
 
 .site-header .brand-name span {
-  color: var(--cyan-deep);
+  color: var(--cyan-ink);
 }
 
 .site-header .nav-links,

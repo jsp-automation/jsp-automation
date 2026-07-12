@@ -43,7 +43,7 @@ const navItems = [
       </div></div>
     </section>
   </div>
-  <main class="act-light solution-light">
+  <main class="act-light solution-light" id="contenido">
     <section class="wrap solution-section problems">
       <div class="sec-label">{content.problems.title}</div>
       <div class="problem-list">{content.problems.items.map((item) => <div class="problem reveal"><h2>{item.title}</h2><p>{item.description}</p></div>)}</div>
@@ -58,6 +58,6 @@ const navItems = [
       <div class="faq-list reveal">{content.faq.items.map((item) => <details><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
     </section>
     <section class="wrap cta-final cta-compact" id="contacto"><div class="reveal"><div class="sec-label">{es.solutions.common.contact}</div><h2>{content.cta.title}</h2><p class="lead">{content.cta.text}</p><a class="pill" href="/contacto/">{content.cta.button} <span class="arr">→</span></a></div></section>
-    <Footer note={es.footer.note} />
   </main>
+  <Footer note={es.footer.note} />
 </Base>

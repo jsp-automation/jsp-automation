@@ -3,4 +3,4 @@
 import Base from '../layouts/Base.astro'; import Header from '../components/Header.astro'; import Footer from '../components/Footer.astro'; import es from '../i18n/es.json';
 const c = es.legal.cookies;
 ---
-<Base title={c.metaTitle} description={c.text}><Header /><main class="legal-page"><article class="wrap legal-prose"><div class="sec-label">Legal</div><h1>{c.title}</h1><p class="legal-intro">{c.text}</p></article></main><Footer note={es.footer.note} copyright={es.footer.copyright} /></Base>
+<Base title={c.metaTitle} description={c.text}><Header /><main class="legal-page" id="contenido"><article class="wrap legal-prose"><div class="sec-label">Legal</div><h1>{c.title}</h1><p class="legal-intro">{c.text}</p></article></main><Footer note={es.footer.note} copyright={es.footer.copyright} /></Base>

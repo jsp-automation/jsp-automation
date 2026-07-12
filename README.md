@@ -21,3 +21,7 @@ npm run preview
 - `public/`: estáticos públicos, incluido el favicon placeholder.
 
 Los tokens viven en `src/styles/global.css` como variables CSS y en `@theme` para utilidades Tailwind. El i18n vive en `src/i18n/`; castellano es la raíz `/` sin prefijo.
+
+## Rendimiento
+
+El presupuesto del sitio evita librerías JavaScript externas, procesa las imágenes mediante `astro:assets` y limita las animaciones a `transform` y `opacity`.

@@ -11,7 +11,7 @@ const navItems = [
 ---
 <Base title={content.meta.title} description={content.meta.description}>
   <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/contacto/" />
-  <main class="hub-page" id="top">
+  <main class="hub-page" id="contenido">
     <section class="wrap hub-solutions"><div class="sec-label">{content.label}</div><h1>{content.title}</h1><div class="hub-rows">{content.items.map((item) => item.href ? <a class="prow reveal" href={item.href}><h2>{item.name}</h2><p>{item.desc}</p><span class="go" aria-hidden="true">→</span></a> : <div class="prow prow-static reveal"><h2>{item.name}</h2><p>{item.desc}</p></div>)}</div></section>
     <section class="wrap cta-final cta-compact"><div class="reveal"><div class="sec-label">{content.cta.label}</div><h2>{content.cta.title}</h2><p class="lead">{content.cta.text}</p><a class="pill" href="/contacto/">{content.cta.button} <span class="arr">→</span></a></div></section>
   </main><Footer note={es.footer.note} />

@@ -11,7 +11,7 @@ const contacts = es.cta.contacts;
 
 <Base title={c.meta.title} description={c.meta.description}>
   <Header />
-  <main class="contact-page">
+  <main class="contact-page" id="contenido">
     <header class="wrap contact-head">
       <div class="sec-label">{c.label}</div>
       <h1>{c.title}</h1>
@@ -31,7 +31,7 @@ const contacts = es.cta.contacts;
             <label class="hp" aria-hidden="true">No rellenar este campo<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
             <label class="privacy-check"><input type="checkbox" name="rgpd" value="aceptada" required /><span>{c.form.privacyPre} <a href="/privacidad/">{c.form.privacyLink}</a>.</span></label>
             <button class="pill" type="submit" data-submit data-idle={c.form.submit} data-sending={c.form.sending}>{c.form.submit}</button>
-            <p class="form-error" data-form-error role="alert" hidden>No se ha podido enviar. Escríbenos a <a href="mailto:ingenieria@jsp-automation.es">ingenieria@jsp-automation.es</a> o llámanos al <a href="tel:+34696199024">+34 696 199 024</a>.</p>
+            <p class="form-error" id="error-envio" data-form-error role="alert" hidden>No se ha podido enviar. Escríbenos a <a href="mailto:ingenieria@jsp-automation.es">ingenieria@jsp-automation.es</a> o llámanos al <a href="tel:+34696199024">+34 696 199 024</a>.</p>
           </form>
         ) : (
           <div class="contact-fallback" data-contact-fallback>
@@ -68,12 +68,16 @@ const contacts = es.cta.contacts;
       if (!button) return;
       button.disabled = true; button.textContent = button.dataset.sending || 'Enviando…';
       if (error) error.hidden = true;
+      form.removeAttribute('aria-describedby');
       try {
         const response = await fetch(form.dataset.endpoint || '', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
         if (!response.ok) throw new Error('Request failed');
         finish();
       } catch {
-        if (error) error.hidden = false;
+        if (error) {
+          error.hidden = false;
+          form.setAttribute('aria-describedby', error.id);
+        }
         button.disabled = false; button.textContent = button.dataset.idle || 'Enviar';
       }
     });

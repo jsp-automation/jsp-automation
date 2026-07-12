@@ -27,7 +27,7 @@ const navItems = [
       </div></div>
     </section>
   </div>
-  <main class="act-light solution-light editorial-page">
+  <main class="act-light solution-light editorial-page" id="contenido">
     <section class="wrap solution-section editorial-intro"><p class="editorial-lead reveal">{c.intro}</p></section>
     <section class="wrap method solution-section method-detail">
       <div class="steps">{c.steps.map((s) => <div class="step reveal"><span class="n">{s.n}</span><h3>{s.h}</h3><p>{s.p}</p></div>)}</div>
@@ -37,6 +37,6 @@ const navItems = [
       <div class="editorial-list">{c.commitments.items.map((item) => <div class="editorial-row reveal"><h3>{item.h}</h3><p>{item.p}</p></div>)}</div>
     </section>
     <section class="wrap cta-final cta-compact"><div class="reveal"><h2>{c.cta.title}</h2><p class="lead">{c.cta.text}</p><a class="pill" href="/contacto/">{c.cta.button} <span class="arr">→</span></a></div></section>
-    <Footer note={es.footer.note} copyright={es.footer.copyright} />
   </main>
+  <Footer note={es.footer.note} copyright={es.footer.copyright} />
 </Base>

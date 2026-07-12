@@ -29,18 +29,18 @@ const {
 <header class="site-header on-light" data-header>
   <div class="wrap nav">
     <a class="brand" href="/" aria-label="JSP Automation">
-      <Image class="brand-logo" src={jspLogo} alt="JSP Automation" />
+      <Image class="brand-logo" src={jspLogo} alt="" />
       <span class="brand-name">JSP <span>AUTOMATION</span></span>
     </a>
     <nav class="nav-links" aria-label="Principal">
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
     <a class="pill pill-nav" href={ctaHref}>{ctaLabel}</a>
-    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-toggle>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil" data-menu-toggle>
       <span aria-hidden="true"></span>
     </button>
   </div>
-  <nav class="mobile-menu" aria-label="Menú móvil" data-mobile-menu>
+  <nav class="mobile-menu" id="menu-movil" aria-label="Menú móvil" data-mobile-menu>
     {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
     <div class="mobile-cta">
       <Button href={ctaHref}>{ctaLabel}</Button>
