@@ -103,9 +103,9 @@
       "items": [
         { "name": "Paletizado (AWP·40L)", "desc": "Paletizado al final de tu línea: 40 kg, 10 ciclos/min, sin obras ni programación compleja.", "href": "/soluciones/paletizado/" },
         { "name": "Despaletizado por Visión IA", "desc": "El robot ve el palet, entiende cómo viene y actúa. Con pallets reales, tal como llegan.", "href": "/soluciones/despaletizado/" },
-        { "name": "GlueArm", "desc": "Encolado robotizado de plantillas con aplicador de diseño propio, integrado en la inyectora existente." },
-        { "name": "Paletizador Caótico IA", "desc": "Cajas de distintos formatos colocadas de forma óptima en tiempo real, con visión 2D/3D." },
-        { "name": "Control de Calidad IA", "desc": "Inspección del 100 % de la producción con cámaras industriales y modelos entrenados para calzado." }
+        { "name": "Visión artificial industrial", "desc": "Detectar, localizar, medir y guiar robots: visión 2D/3D integrada en tu línea.", "href": "/soluciones/vision-artificial/" },
+        { "name": "Control de Calidad IA", "desc": "Inspección del 100 % de la producción con cámaras industriales y modelos entrenados para calzado.", "href": "/soluciones/control-de-calidad/" },
+        { "name": "Automatización a medida", "desc": "Cuando no existe máquina estándar para tu proceso, la diseñamos y la fabricamos. Como GlueArm.", "href": "/soluciones/automatizacion-a-medida/" }
       ],
       "cta": { "label": "Contacto", "title": "¿Qué proceso quieres automatizar?", "text": "Cuéntanos dónde se frena tu producción. Te decimos en días si podemos mejorarlo.", "button": "Cuéntanos tu proceso" }
     },
@@ -147,6 +147,80 @@
         { "question": "¿Funciona con pallets de distintos proveedores?", "answer": "Ese es exactamente el problema que ataca: el sistema detecta cada caja tal como llega, sin depender de un patrón fijo." }, { "question": "¿Qué necesitáis saber de mi caso?", "answer": "Dimensiones y pesos de las cajas, y fotos o un vídeo corto de cómo llegan tus pallets. Con eso hacemos una primera valoración." }, { "question": "¿Cuándo estará disponible?", "answer": "Es un desarrollo en curso. Trabajamos con casos reales para definirlo: si el tuyo encaja, te lo decimos con claridad y sin compromiso." }
       ] },
       "cta": { "title": "¿Recibes pallets que no hay quien automatice?", "text": "Mándanos fotos de cómo llegan. Te decimos en días si nuestra visión 3D puede con ellos.", "button": "Cuéntanos tu proceso" }
+    },
+    "visionArtificial": {
+      "meta": { "title": "Visión artificial industrial | JSP Automation", "description": "Sistemas de visión artificial para detectar, localizar, medir y guiar robots en entornos industriales. Integrados en tu línea por JSP Automation." },
+      "hero": { "eyebrow": "Soluciones · Visión artificial", "title": "Detectar, localizar, medir. Y actuar.", "sub": "Sistemas de visión 2D y 3D que dan a tus máquinas la información que les falta: qué hay, dónde está y en qué estado llega.", "imageAlt": "Sistema industrial de visión artificial integrado en una línea de producción" },
+      "problems": { "title": "¿Te suena?", "items": [
+        { "title": "El robot no ve lo que manipula", "description": "Las posiciones fijas exigen una precisión aguas arriba que tu proceso no puede garantizar." },
+        { "title": "Piezas que llegan en cualquier posición", "description": "Orientaciones y colocaciones variables que hoy solo resuelve una persona." },
+        { "title": "Medir a mano lo que debería medirse solo", "description": "Controles dimensionales lentos, muestreados y dependientes de quien mide." },
+        { "title": "Leer y verificar a cadencia de línea", "description": "Códigos, etiquetas y marcados que hay que comprobar pieza a pieza." }
+      ] },
+      "system": { "title": "Qué hace un sistema de visión JSP", "intro": "Un sistema de visión responde preguntas: ¿qué pieza es?, ¿dónde está?, ¿cómo viene?, ¿está bien? Nosotros lo diseñamos alrededor de la pregunta que tu proceso necesita responder — y le damos la respuesta al robot o al PLC en tiempo real.", "capabilities": ["Detectar y localizar — coordenadas 2D/3D para guiado de robots", "Medir — dimensiones y tolerancias sin contacto", "Clasificar — separar referencias, formatos o estados", "Verificar y leer — códigos, etiquetas, presencia de componentes"], "closing": "La visión es la base de nuestros sistemas de despaletizado y de control de calidad: la misma tecnología, aplicada a tu problema concreto.", "imageAlt": "Sistema de visión artificial aplicado a una célula robotizada" },
+      "approach": { "label": "Método", "title": "Cómo lo abordamos", "steps": [
+        { "n": "01", "h": "Entendemos qué necesitas saber", "p": "Qué decisión debe tomar la máquina y con qué información." },
+        { "n": "02", "h": "Probamos con tus piezas", "p": "Pruebas de detección con muestras reales antes de comprometer nada." },
+        { "n": "03", "h": "Elegimos cámara e iluminación según la aplicación", "p": "2D o 3D, óptica y luz al servicio del problema. Nunca al revés." },
+        { "n": "04", "h": "Integramos con tu línea", "p": "PLC, robot y trazabilidad: la visión no vive sola." }
+      ] },
+      "faq": { "title": "Preguntas frecuentes", "items": [
+        { "question": "¿Visión 2D o 3D?", "answer": "Depende de si la altura y la orientación importan en tu aplicación. Lo determina la prueba con tus piezas, no el catálogo." },
+        { "question": "¿Funciona con piezas brillantes u oscuras?", "answer": "La iluminación es la mitad del sistema. Se valida en las pruebas con muestras reales antes de proponerte la solución." },
+        { "question": "¿Se integra con mi PLC o robot actual?", "answer": "Sí. La integración con el control existente forma parte del proyecto." }
+      ] },
+      "cta": { "title": "¿Tu proceso necesita ojos?", "text": "Mándanos fotos de tus piezas y cuéntanos qué necesitas saber de ellas. Montamos una prueba de detección.", "button": "Cuéntanos tu proceso" }
+    },
+    "controlCalidad": {
+      "meta": { "title": "Control de calidad con visión artificial e IA | JSP Automation", "description": "Inspección automática del 100 % de la producción con cámaras industriales y modelos de IA. Sin fatiga y sin variabilidad entre turnos." },
+      "hero": { "eyebrow": "Soluciones · Control de calidad", "title": "El ojo que nunca descansa. Cero defectos por fatiga.", "sub": "Inspección automática con cámaras industriales y modelos de IA entrenados con tu casuística real. Detecta lo que el ojo humano pasa por alto a alta cadencia.", "imageAlt": "Célula industrial de inspección automática de calidad" },
+      "problems": { "title": "¿Te suena?", "items": [
+        { "title": "La calidad depende del ojo y del turno", "description": "El mismo defecto pasa o no pasa según quién mire y a qué hora." },
+        { "title": "El muestreo deja pasar defectos", "description": "Inspeccionar una de cada N piezas es asumir que las demás van bien." },
+        { "title": "Reclamaciones sin evidencia", "description": "Sin registro de lo inspeccionado, cada reclamación es tu palabra contra la del cliente." },
+        { "title": "El criterio cambia entre personas", "description": "Lo que para uno es defecto, para otro es aceptable." }
+      ] },
+      "inspection": { "title": "Cómo funciona la inspección", "steps": [
+        { "n": "01", "h": "La pieza avanza por la línea", "p": "Sin paradas ni manipulación adicional." },
+        { "n": "02", "h": "Las cámaras capturan cada unidad", "p": "Cámaras industriales posicionadas según la defectología." },
+        { "n": "03", "h": "El modelo de IA analiza en tiempo real", "p": "Entrenado con tus piezas buenas y malas, con umbral configurable por referencia." },
+        { "n": "04", "h": "OK continúa, NOK se expulsa", "p": "Cada rechazo queda registrado con su fotografía, trazable." }
+      ], "closing": "El sistema está en desarrollo, con la defectología entrenada sobre casuística real de planta — inicialmente para calzado: manchas en material, defectos de inyección, posicionamiento, hilos y costuras. Si tu producto es otro, cuéntanoslo: el enfoque es el mismo." },
+      "approach": { "label": "Método", "title": "Cómo lo abordamos", "steps": [
+        { "n": "01", "h": "Definimos qué es defecto contigo", "p": "Catálogo de defectos y criterio de aceptación acordados por escrito." },
+        { "n": "02", "h": "Recogemos muestras reales", "p": "Piezas OK y NOK de tu producción para entrenar y validar." },
+        { "n": "03", "h": "Validamos la detección", "p": "Métricas de acierto acordadas antes de instalar nada." },
+        { "n": "04", "h": "Integramos en tu línea", "p": "Expulsión, registro y trazabilidad sin detener la producción." }
+      ] },
+      "faq": { "title": "Preguntas frecuentes", "items": [
+        { "question": "¿Detecta cualquier defecto?", "answer": "Detecta lo que se define y se entrena. Por eso el proyecto empieza por el catálogo de defectos con muestras reales, no por la cámara." },
+        { "question": "¿Qué pasa con los falsos rechazos?", "answer": "El umbral es configurable por referencia y se ajusta en producción real hasta el equilibrio que tú definas." },
+        { "question": "¿Guarda evidencia de lo inspeccionado?", "answer": "Cada pieza rechazada queda registrada con su fotografía: trazabilidad para ti y para tus clientes." }
+      ] },
+      "cta": { "title": "¿La calidad se te escapa entre turnos?", "text": "Cuéntanos qué defectos te duelen y mándanos fotos de piezas OK y NOK. Te decimos si podemos detectarlos.", "button": "Cuéntanos tu proceso" }
+    },
+    "automatizacionMedida": {
+      "meta": { "title": "Automatización a medida y maquinaria especial | JSP Automation", "description": "Cuando no existe una máquina estándar para tu proceso, la diseñamos y la fabricamos: mecánica, robótica, visión y software integrados." },
+      "hero": { "eyebrow": "Soluciones · A medida", "title": "Cuando la solución estándar no encaja, la fabricamos.", "sub": "Maquinaria especial y automatización a medida: mecánica, robótica, visión artificial y software, diseñados alrededor de tu proceso.", "imageAlt": "GlueArm, solución de automatización industrial a medida" },
+      "problems": { "title": "¿Te suena?", "items": [
+        { "title": "No existe máquina para tu proceso", "description": "Tu operación es demasiado específica para cualquier catálogo." },
+        { "title": "La operación manual limita el crecimiento", "description": "No puedes producir más sin más manos, y las manos no llegan." },
+        { "title": "Te piden adaptar tu proceso a su máquina", "description": "Los integradores ofrecen lo que tienen, no lo que necesitas." },
+        { "title": "Necesitas una sola pieza que hable con todo", "description": "Mecánica, control, datos y personas trabajando como un solo sistema." }
+      ] },
+      "caseStudy": { "title": "Así nació GlueArm", "intro": "No existía ninguna máquina para encolar plantillas dentro de una inyectora de calzado. La diseñamos: un brazo colaborativo con aplicador de pegamento de diseño propio, montado sobre la máquina existente del cliente, sin obras y sin parar la producción. Cuatro unidades trabajan en continuo desde 2022.", "features": ["Diseño mecánico propio — cada útil y soporte nace del proceso", "Impresión 3D industrial — iteración rápida y coste controlado en componentes clave", "Electrónica y control — integrado con la máquina existente", "Software a medida — la receta la cambia el operario, no un programador"], "imageAlt": "GlueArm trabajando en una inyectora de calzado" },
+      "approach": { "label": "Método", "title": "Cómo lo abordamos", "steps": [
+        { "n": "01", "h": "Entendemos la operación manual actual", "p": "Qué hace exactamente la persona, y por qué lo hace así." },
+        { "n": "02", "h": "Prototipamos lo crítico", "p": "La parte que nadie ha resuelto se prueba primero, antes de diseñar el resto." },
+        { "n": "03", "h": "Diseñamos la máquina completa", "p": "Mecánica, control y seguridad como un solo sistema." },
+        { "n": "04", "h": "Fabricamos, instalamos y acompañamos", "p": "El mismo equipo desde la primera visita hasta el soporte." }
+      ] },
+      "faq": { "title": "Preguntas frecuentes", "items": [
+        { "question": "¿Hacéis proyectos fuera del calzado?", "answer": "Sí. Venimos del calzado y es donde más casuística tenemos, pero el método aplica a cualquier proceso industrial." },
+        { "question": "¿Y si mi proceso no es viable de automatizar?", "answer": "Te lo decimos en el estudio, con los motivos. Preferimos un no claro a un proyecto fallido." },
+        { "question": "¿Quién mantiene la máquina después?", "answer": "JSP. La diseñamos y la fabricamos nosotros: el soporte es técnico directo con quien la construyó." }
+      ] },
+      "cta": { "title": "¿Tienes un proceso que nadie te automatiza?", "text": "Descríbenos la operación y mándanos un vídeo de cómo se hace hoy. Lo estudiamos y te decimos si podemos construirlo.", "button": "Cuéntanos tu proceso" }
     }
   },
   "footer": {

@@ -70,7 +70,13 @@ const navItems = [
           <p class="lead">{es.products.lead}</p>
         </div>
         {es.products.items.map((p, index) => {
-          const href = index === 0 || index === 2 ? '/soluciones/paletizado/' : index === 3 ? '/soluciones/despaletizado/' : undefined;
+          const href = index === 0 || index === 2
+            ? '/soluciones/paletizado/'
+            : index === 1
+              ? '/soluciones/automatizacion-a-medida/'
+              : index === 3
+                ? '/soluciones/despaletizado/'
+                : '/soluciones/control-de-calidad/';
           const Tag = href ? 'a' : 'div';
           return <Tag class:list={["prow", "reveal", { "prow-static": !href }]} href={href}>
             <h3>{p.name}</h3>

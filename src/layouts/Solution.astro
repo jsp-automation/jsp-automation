@@ -5,7 +5,13 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import es from '../i18n/es.json';
 
-interface Props { content: typeof es.solutions.paletizado | typeof es.solutions.despaletizado; heroImage: ImageMetadata; }
+type SolutionContent =
+  | typeof es.solutions.paletizado
+  | typeof es.solutions.despaletizado
+  | typeof es.solutions.visionArtificial
+  | typeof es.solutions.controlCalidad
+  | typeof es.solutions.automatizacionMedida;
+interface Props { content: SolutionContent; heroImage: ImageMetadata; }
 const { content, heroImage } = Astro.props;
 const navItems = [
   { label: es.nav.soluciones, href: '/soluciones/' },

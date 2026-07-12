@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Solution from '../../layouts/Solution.astro';
+import es from '../../i18n/es.json';
+import heroImg from '../../assets/provisional/hero.jpg';
+import glueImg from '../../assets/provisional/glue2.jpg';
+const content = es.solutions.visionArtificial;
+---
+<Solution content={content} heroImage={heroImg}>
+  <section slot="specific" class="wrap case solution-product">
+    <div class="media reveal"><Image src={glueImg} alt={content.system.imageAlt} widths={[600, 900]} sizes="(max-width: 860px) 100vw, 50vw" quality={82} /></div>
+    <div class="reveal"><div class="sec-label">Sistema</div><h2>{content.system.title}</h2><p class="lead">{content.system.intro}</p><ul class="feature-list">{content.system.capabilities.map((capability) => <li>{capability}</li>)}</ul><p>{content.system.closing}</p></div>
+  </section>
+</Solution>

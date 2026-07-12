@@ -1,0 +1,12 @@
+---
+import Solution from '../../layouts/Solution.astro';
+import es from '../../i18n/es.json';
+import cellImg from '../../assets/provisional/cell.jpg';
+const content = es.solutions.controlCalidad;
+---
+<Solution content={content} heroImage={cellImg}>
+  <div slot="specific">
+    <section class="wrap method solution-section"><div class="reveal"><div class="sec-label">Sistema</div><h2>{content.inspection.title}</h2></div><div class="steps">{content.inspection.steps.map((step) => <div class="step reveal"><span class="n">{step.n}</span><h3>{step.h}</h3><p>{step.p}</p></div>)}</div></section>
+    <section class="wrap solution-section prose-block reveal"><p class="lead">{content.inspection.closing}</p></section>
+  </div>
+</Solution>
