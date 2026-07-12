@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://jsp-automation.es',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => page !== 'https://jsp-automation.es/styleguide/' })],
   i18n: {
     defaultLocale: 'es',
     locales: ['es'],

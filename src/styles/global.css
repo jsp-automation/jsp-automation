@@ -909,7 +909,7 @@ h3 {
 .problem-list { margin-top: clamp(36px, 5vw, 56px); }
 .problem { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr); gap: clamp(20px, 5vw, 70px); padding: 27px 0; border-top: 1px solid var(--line); }
 .problem:last-child { border-bottom: 1px solid var(--line); }
-.problem h3 { color: var(--ink); font-size: 18px; }
+.problem h2 { color: var(--ink); font-size: 18px; }
 .problem p { color: var(--mut); font-size: 15px; }
 .solution-product, .solution-extra { padding-top: clamp(70px, 9vw, 120px); padding-bottom: clamp(70px, 9vw, 120px); }
 .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 30px; border-top: 1px solid var(--line); }
@@ -932,7 +932,7 @@ h3 {
 .hub-rows .prow { border-color: var(--line); }
 .hub-rows .prow:last-child { border-bottom-color: var(--line); }
 .hub-rows .prow:hover { background: rgba(20, 21, 25, .025); }
-.hub-rows .prow h3 { color: var(--ink); }
+.hub-rows .prow h2 { color: var(--ink); }
 .hub-rows .prow p { color: var(--mut); }
 .prow-static { cursor: default; }
 .prow-static:hover { padding-left: 0; background: transparent; }
@@ -1358,7 +1358,7 @@ h3, .display-3 {
   padding-left: 14px;
 }
 
-.prow h3 {
+.prow h2 {
   color: #F2F3F4;
 }
 

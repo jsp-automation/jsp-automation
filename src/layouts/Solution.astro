@@ -13,6 +13,15 @@ type SolutionContent =
   | typeof es.solutions.automatizacionMedida;
 interface Props { content: SolutionContent; heroImage: ImageMetadata; }
 const { content, heroImage } = Astro.props;
+const organizationId = `${new URL('/', Astro.site).href}#organization`;
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: content.hero.title,
+  provider: { '@id': organizationId },
+  areaServed: 'ES',
+  description: content.meta.description,
+};
 const navItems = [
   { label: es.nav.soluciones, href: '/soluciones/' },
   { label: es.nav.proyectos, href: '/#caso' },
@@ -21,6 +30,7 @@ const navItems = [
 ];
 ---
 <Base title={content.meta.title} description={content.meta.description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(serviceJsonLd)} />
   <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/contacto/" />
   <div class="act-dark solution-act" id="top">
     <section class="hero solution-hero">
@@ -36,7 +46,7 @@ const navItems = [
   <main class="act-light solution-light">
     <section class="wrap solution-section problems">
       <div class="sec-label">{content.problems.title}</div>
-      <div class="problem-list">{content.problems.items.map((item) => <div class="problem reveal"><h3>{item.title}</h3><p>{item.description}</p></div>)}</div>
+      <div class="problem-list">{content.problems.items.map((item) => <div class="problem reveal"><h2>{item.title}</h2><p>{item.description}</p></div>)}</div>
     </section>
     <slot name="specific" />
     <section class="wrap method solution-section">
