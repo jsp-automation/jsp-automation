@@ -15,7 +15,7 @@ const navItems = [
 ];
 ---
 <Base title={c.meta.title} description={c.meta.description}>
-  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/#contacto" />
+  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/contacto/" />
   <div class="act-dark solution-act" id="top">
     <section class="hero solution-hero">
       <div class="hero-media"><Image src={heroImg} alt={c.hero.imageAlt} widths={[760, 1200, 1600]} sizes="100vw" loading="eager" fetchpriority="high" quality={80} /></div>
@@ -23,7 +23,7 @@ const navItems = [
         <div class="hero-eyebrow">{c.hero.eyebrow}</div>
         <h1><span class="l"><i>{c.hero.title}</i></span></h1>
         <p class="hero-sub">{c.hero.sub}</p>
-        <div class="hero-cta"><a class="pill" href="/#contacto">{c.hero.primary} <span class="arr">→</span></a><a class="pill pill-ghost" href="/soluciones/">{c.hero.secondary}</a></div>
+        <div class="hero-cta"><a class="pill" href="/contacto/">{c.hero.primary} <span class="arr">→</span></a><a class="pill pill-ghost" href="/soluciones/">{c.hero.secondary}</a></div>
       </div></div>
     </section>
   </div>
@@ -36,7 +36,7 @@ const navItems = [
       <div class="sec-label">{c.commitments.label}</div><h2>{c.commitments.title}</h2>
       <div class="editorial-list">{c.commitments.items.map((item) => <div class="editorial-row reveal"><h3>{item.h}</h3><p>{item.p}</p></div>)}</div>
     </section>
-    <section class="wrap cta-final cta-compact"><div class="reveal"><h2>{c.cta.title}</h2><p class="lead">{c.cta.text}</p><a class="pill" href="/#contacto">{c.cta.button} <span class="arr">→</span></a></div></section>
+    <section class="wrap cta-final cta-compact"><div class="reveal"><h2>{c.cta.title}</h2><p class="lead">{c.cta.text}</p><a class="pill" href="/contacto/">{c.cta.button} <span class="arr">→</span></a></div></section>
     <Footer note={es.footer.note} copyright={es.footer.copyright} />
   </main>
 </Base>

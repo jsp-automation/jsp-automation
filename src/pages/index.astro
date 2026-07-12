@@ -19,7 +19,7 @@ const navItems = [
 ---
 
 <Base title={es.meta.title} description={es.meta.description}>
-  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="#contacto" />
+  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/contacto/" />
 
   <!-- ACTO I : mundo oscuro continuo -->
   <div class="act-dark" id="top">
@@ -36,7 +36,7 @@ const navItems = [
           </h1>
           <p class="hero-sub">{es.hero.sub}</p>
           <div class="hero-cta">
-            <a class="pill" href="#contacto">{es.hero.ctaPrimary} <span class="arr">→</span></a>
+            <a class="pill" href="/contacto/">{es.hero.ctaPrimary} <span class="arr">→</span></a>
             <a class="pill pill-ghost" href="/soluciones/">{es.hero.ctaSecondary}</a>
           </div>
         </div>
@@ -147,7 +147,7 @@ const navItems = [
         <div class="sec-label">{es.cta.label}</div>
         <h2>{es.cta.title}</h2>
         <p class="lead">{es.cta.lead}</p>
-        <a class="pill" href="#">{es.cta.button} <span class="arr">→</span></a>
+        <a class="pill" href="/contacto/">{es.cta.button} <span class="arr">→</span></a>
         <div class="cta-note">{es.cta.note}</div>
       </div>
       <div class="contact-row reveal">

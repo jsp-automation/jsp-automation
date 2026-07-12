@@ -21,7 +21,7 @@ const navItems = [
 ];
 ---
 <Base title={content.meta.title} description={content.meta.description}>
-  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/#contacto" />
+  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="/contacto/" />
   <div class="act-dark solution-act" id="top">
     <section class="hero solution-hero">
       <div class="hero-media"><Image src={heroImage} alt={content.hero.imageAlt} widths={[760, 1200, 1600]} sizes="100vw" loading="eager" fetchpriority="high" quality={80} /></div>
@@ -29,7 +29,7 @@ const navItems = [
         <div class="hero-eyebrow">{content.hero.eyebrow}</div>
         <h1><span class="l"><i>{content.hero.title}</i></span></h1>
         <p class="hero-sub">{content.hero.sub}</p>
-        <div class="hero-cta"><a class="pill" href="/#contacto">{es.nav.cta} <span class="arr">→</span></a><a class="pill pill-ghost" href="/soluciones/">{es.solutions.common.all}</a></div>
+        <div class="hero-cta"><a class="pill" href="/contacto/">{es.nav.cta} <span class="arr">→</span></a><a class="pill pill-ghost" href="/soluciones/">{es.solutions.common.all}</a></div>
       </div></div>
     </section>
   </div>
@@ -47,7 +47,7 @@ const navItems = [
       <div class="sec-label">{es.solutions.common.faq}</div><h2>{content.faq.title}</h2>
       <div class="faq-list reveal">{content.faq.items.map((item) => <details><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
     </section>
-    <section class="wrap cta-final cta-compact" id="contacto"><div class="reveal"><div class="sec-label">{es.solutions.common.contact}</div><h2>{content.cta.title}</h2><p class="lead">{content.cta.text}</p><a class="pill" href="/#contacto">{content.cta.button} <span class="arr">→</span></a></div></section>
+    <section class="wrap cta-final cta-compact" id="contacto"><div class="reveal"><div class="sec-label">{es.solutions.common.contact}</div><h2>{content.cta.title}</h2><p class="lead">{content.cta.text}</p><a class="pill" href="/contacto/">{content.cta.button} <span class="arr">→</span></a></div></section>
     <Footer note={es.footer.note} />
   </main>
 </Base>

@@ -1,0 +1,6 @@
+---
+// CONTENIDO BASE A VALIDAR POR ASESORÍA LEGAL antes de publicar como versión definitiva.
+import Base from '../layouts/Base.astro'; import Header from '../components/Header.astro'; import Footer from '../components/Footer.astro'; import es from '../i18n/es.json';
+const c = es.legal.privacy;
+---
+<Base title={c.metaTitle} description={c.intro}><Header /><main class="legal-page"><article class="wrap legal-prose"><div class="sec-label">Legal</div><h1>{c.title}</h1><p class="legal-intro">{c.intro}</p>{c.sections.map((section) => <section><h2>{section.title}</h2><p>{section.text}</p></section>)}</article></main><Footer note={es.footer.note} copyright={es.footer.copyright} /></Base>

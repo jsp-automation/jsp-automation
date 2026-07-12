@@ -255,6 +255,39 @@
     "criterion": { "label": "Criterio", "title": "Automatizar no es instalar tecnología por instalarla.", "text": "Un proyecto debe resolver un problema real, ser viable técnicamente, tener sentido económico y poder mantenerse durante años. Por eso analizamos cada aplicación con una visión práctica y transparente, incluyendo sus limitaciones, riesgos y retorno esperado.", "quote": "Nuestro compromiso es proponer únicamente soluciones que consideremos técnicamente viables y que aporten un beneficio real al cliente." },
     "cta": { "title": "¿Hablamos de tu proceso?", "text": "Trato directo con quien diseña y construye la solución. Te decimos en días si podemos mejorarlo.", "button": "Cuéntanos tu proceso" }
   },
+  "contacto": {
+    "meta": { "title": "Contacto | JSP Automation", "description": "Cuéntanos tu proceso: estudio técnico-comercial sin compromiso. Te decimos en días si podemos mejorarlo." },
+    "label": "Contacto",
+    "title": "Cuéntanos tu proceso.",
+    "lead": "Te decimos en días si podemos mejorarlo. Estudio técnico-comercial sin compromiso.",
+    "form": { "name": "Nombre", "company": "Empresa", "email": "Email", "phone": "Teléfono", "process": "¿Qué proceso quieres automatizar?", "placeholder": "Qué se hace hoy, cuántas unidades o turnos, y qué te gustaría conseguir.", "privacyPre": "He leído y acepto la", "privacyLink": "política de privacidad", "submit": "Enviar", "sending": "Enviando…" },
+    "success": { "title": "Recibido. Un ingeniero revisará tu proceso.", "text": "Te contactaremos en pocos días laborables. Si tienes fotos, vídeos o planos del proceso, nos ayudan mucho: envíalos a ingenieria@jsp-automation.es respondiendo a nuestro mensaje o directamente por email." },
+    "error": "No se ha podido enviar. Escríbenos a ingenieria@jsp-automation.es o llámanos al +34 696 199 024.",
+    "fallbackTitle": "Escríbenos directamente",
+    "fallbackText": "El formulario no está disponible en este momento. Cuéntanos tu proceso por email o llámanos.",
+    "afterTitle": "Qué pasa después",
+    "steps": ["Un ingeniero revisa tu proceso.", "Te contactamos para entenderlo bien.", "Te decimos si es viable y cómo lo abordaríamos."],
+    "note": "Lo revisa un ingeniero, no un comercial."
+  },
+  "legal": {
+    "privacy": {
+      "metaTitle": "Política de privacidad | JSP Automation", "title": "Política de privacidad", "intro": "Esta política explica de forma clara cómo tratamos los datos que nos facilitas al contactar con nosotros.",
+      "sections": [
+        { "title": "Responsable", "text": "JSP Automation (Arnedo, La Rioja). [Razón social y NIF — pendiente de completar]. Contacto: ingenieria@jsp-automation.es." },
+        { "title": "Finalidad", "text": "Tratamos tus datos para responder a solicitudes de contacto y realizar el estudio técnico-comercial del proceso que nos plantees." },
+        { "title": "Base jurídica", "text": "La base jurídica es tu consentimiento, otorgado al aceptar esta política y enviar el formulario." },
+        { "title": "Destinatarios", "text": "No cedemos tus datos a terceros. El envío del formulario se procesa a través de un proveedor de formularios que actúa como encargado del tratamiento." },
+        { "title": "Conservación", "text": "Conservamos los datos durante el tiempo necesario para atender la solicitud y las responsabilidades que puedan derivarse." },
+        { "title": "Tus derechos", "text": "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a ingenieria@jsp-automation.es. También puedes retirar tu consentimiento y reclamar ante la autoridad de control competente." }
+      ]
+    },
+    "notice": { "metaTitle": "Aviso legal | JSP Automation", "title": "Aviso legal", "sections": [
+      { "title": "Titular", "text": "JSP Automation [Razón social y NIF — pendiente]. Arnedo (La Rioja). Contacto: ingenieria@jsp-automation.es y +34 696 199 024." },
+      { "title": "Propiedad intelectual", "text": "Los textos, imágenes, diseño y demás contenidos de este sitio pertenecen a JSP Automation o se utilizan con autorización. No se permite su reproducción, distribución o transformación sin autorización, salvo en los casos previstos por la ley." },
+      { "title": "Limitación de responsabilidad", "text": "JSP Automation procura que la información publicada sea correcta y esté actualizada, pero no garantiza la ausencia de errores ni se responsabiliza del uso que se haga de ella. Los enlaces externos, cuando existan, se ofrecen como referencia y sus contenidos son responsabilidad de sus titulares." }
+    ] },
+    "cookies": { "metaTitle": "Política de cookies | JSP Automation", "title": "Política de cookies", "text": "Este sitio no utiliza cookies de seguimiento ni analítica. Solo se emplea almacenamiento técnico imprescindible para el funcionamiento del sitio." }
+  },
   "footer": {
     "copyright": "© 2026 JSP Automation · Arnedo, La Rioja",
     "note": "Robótica, visión artificial y automatización industrial"
