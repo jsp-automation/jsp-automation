@@ -59,11 +59,13 @@
     "titleLine2": "Cobro por objetivos cumplidos.",
     "lead": "Cada proyecto avanza por etapas con objetivos y puntos de validación acordados contigo. Cada hito se cumple antes de continuar.",
     "steps": [
-      { "n": "01", "h": "Definición del proyecto", "p": "Objetivos, necesidades y criterios de aceptación acordados contigo." },
-      { "n": "02", "h": "Diseño e integración", "p": "Desarrollo de la solución técnica y adaptación a tu proceso real." },
-      { "n": "03", "h": "Instalación y puesta en marcha", "p": "Montaje, configuración y primeras pruebas supervisadas por JSP." },
-      { "n": "04", "h": "Ajustes en producción real", "p": "Optimización de ciclos y parámetros en tus condiciones reales." },
-      { "n": "05", "h": "Validación final del cliente", "p": "Aceptación según los objetivos acordados. El proyecto cierra aquí, no antes." }
+      { "n": "01", "h": "Entendemos el proceso", "p": "Qué se quiere automatizar y por qué: proceso actual, tiempos, operarios y objetivo." },
+      { "n": "02", "h": "Estudiamos la viabilidad", "p": "Comprobamos que el proyecto sea técnicamente realizable antes de plantear una inversión." },
+      { "n": "03", "h": "Definimos la solución", "p": "Propuesta técnica adaptada: robot, agarre, visión y automatización según la aplicación." },
+      { "n": "04", "h": "Validamos antes de fabricar", "p": "Pruebas, simulaciones o demostraciones de los puntos críticos, con datos." },
+      { "n": "05", "h": "Fabricamos e integramos", "p": "Ingeniería, programación, fabricación mecánica, montaje e integración." },
+      { "n": "06", "h": "Instalamos y ponemos en marcha", "p": "Ajuste a las condiciones reales, validación y formación de tu equipo." },
+      { "n": "07", "h": "Acompañamos después", "p": "Soporte técnico, ajustes, mantenimiento y ampliaciones." }
     ],
     "claims": [
       { "b": "La instalación no termina cuando se entrega:", "rest": " termina cuando funciona." },
@@ -75,8 +77,8 @@
     "title": "GlueArm, encolado robotizado de plantillas.",
     "lead": "Brazo colaborativo con aplicador de diseño propio, montado sobre la inyectora existente del cliente. Sin obras y sin parar la producción durante la instalación.",
     "data": [
-      { "count": 25, "prefix": "+", "suffix": "%", "label": "Producción" },
-      { "count": 60, "prefix": "−", "suffix": "%", "label": "Pegamento" },
+      { "count": 35, "prefix": "+", "suffix": "%", "label": "Producción (aprox.)" },
+      { "count": 50, "prefix": "−", "suffix": "%", "label": "Adhesivo (aprox.)" },
       { "static": "×4", "label": "Unidades desde 2022" }
     ],
     "quote": "La instalación no modifica la inyectora ni interrumpe la producción. El robot se integra en el flujo existente y empieza a trabajar desde el primer día.",
@@ -223,8 +225,38 @@
       "cta": { "title": "¿Tienes un proceso que nadie te automatiza?", "text": "Descríbenos la operación y mándanos un vídeo de cómo se hace hoy. Lo estudiamos y te decimos si podemos construirlo.", "button": "Cuéntanos tu proceso" }
     }
   },
+  "comoTrabajamos": {
+    "meta": { "title": "Cómo trabajamos | JSP Automation", "description": "De una necesidad industrial a una solución funcionando: método de 7 fases con estudio de viabilidad, validación previa y acompañamiento tras la instalación." },
+    "hero": { "eyebrow": "Método", "title": "De una necesidad industrial a una solución funcionando.", "sub": "Cada proyecto de automatización es diferente. No empezamos ofreciendo una máquina cerrada: empezamos entendiendo el proceso, sus limitaciones y los objetivos del cliente.", "primary": "Cuéntanos tu proceso", "secondary": "Ver soluciones", "imageAlt": "Sistema de automatización industrial en funcionamiento" },
+    "intro": "Nuestro método reduce riesgos, valida la viabilidad del proyecto y desarrolla una solución adaptada a las condiciones reales de producción.",
+    "steps": [
+      { "n": "01", "h": "Entendemos el proceso", "p": "El primer paso es conocer qué se quiere automatizar y por qué. Analizamos el proceso actual, los productos que intervienen, los tiempos de ciclo, la intervención de los operarios, los problemas existentes y el resultado que espera conseguir la empresa. Cuando es necesario, visitamos las instalaciones para observar el proceso directamente." },
+      { "n": "02", "h": "Estudiamos la viabilidad", "p": "Antes de plantear una inversión, comprobamos que el proyecto sea técnicamente realizable: peso, dimensiones y variabilidad del producto; ritmo de producción; espacio disponible; alcance del robot; necesidades de visión artificial; seguridad; integración con la maquinaria existente; cambios de formato y futuras ampliaciones. Si una automatización no es viable, requiere modificar el proceso o la inversión no está justificada, lo comunicamos desde el principio." },
+      { "n": "03", "h": "Definimos la solución", "p": "Confirmada la viabilidad, diseñamos una propuesta técnica adaptada al proceso: robot, sistemas de agarre, cámaras, sensores y elementos de automatización más adecuados. La propuesta incluye el alcance del proyecto, el funcionamiento previsto, las responsabilidades de cada parte y los condicionantes técnicos." },
+      { "n": "04", "h": "Validamos antes de fabricar", "p": "Siempre que el proyecto lo permite, realizamos pruebas, simulaciones o demostraciones previas: alcance del robot, agarre del producto, tiempos de ciclo, precisión, estabilidad del proceso o funcionamiento de la visión artificial. Decisiones con datos y menos cambios durante la puesta en marcha." },
+      { "n": "05", "h": "Fabricamos e integramos", "p": "Desarrollamos la solución combinando ingeniería, programación, fabricación mecánica, montaje e integración de los equipos. Trabajamos con una red de fabricantes, talleres y especialistas técnicos seleccionados según cada proyecto, manteniendo la coordinación y la responsabilidad sobre el resultado final." },
+      { "n": "06", "h": "Instalamos y ponemos en marcha", "p": "Instalación y pruebas en tus instalaciones. Durante la puesta en marcha ajustamos el sistema a las condiciones reales de producción, validamos el funcionamiento y formamos a las personas que lo utilizarán o mantendrán." },
+      { "n": "07", "h": "Acompañamos después de la instalación", "p": "Una automatización no termina el día de la entrega. Ofrecemos soporte técnico, ajustes, mantenimiento y posibilidades de mejora o ampliación para que el sistema siga respondiendo a tus necesidades de producción." }
+    ],
+    "commitments": { "label": "Compromisos", "title": "Lo que garantiza el método.", "items": [
+      { "h": "Viabilidad antes que inversión", "p": "Si el proyecto no es viable o la inversión no está justificada, te lo decimos desde el principio, con los motivos." },
+      { "h": "Validación con datos", "p": "Los puntos críticos se prueban antes de fabricar, no después de instalar." },
+      { "h": "El proyecto no termina en la entrega", "p": "Puesta en marcha en condiciones reales, formación de tu equipo y soporte técnico posterior." }
+    ] },
+    "cta": { "title": "¿Tienes un proceso que quieres automatizar?", "text": "Cuéntanos qué necesitas mejorar y estudiaremos contigo su viabilidad técnica.", "button": "Cuéntanos tu proceso" }
+  },
+  "empresa": {
+    "meta": { "title": "Empresa | JSP Automation", "description": "JSP Automation nace en Arnedo, La Rioja: automatización industrial, robótica y visión artificial creadas desde más de una década de experiencia en planta." },
+    "hero": { "eyebrow": "Empresa", "title": "Automatización creada desde la experiencia industrial.", "sub": "JSP Automation nace en Arnedo, La Rioja, para ayudar a las empresas industriales a automatizar procesos reales de forma práctica, rentable y adaptada a cada planta.", "primary": "Cuéntanos tu proceso", "secondary": "Cómo trabajamos", "imageAlt": "Celda de automatización industrial de JSP Automation" },
+    "experience": { "label": "Experiencia", "title": "Venimos de la planta, no del catálogo.", "text": "Más de una década de experiencia profesional en entornos industriales: fabricación de maquinaria, mecanizado, mejora de procesos y resolución de problemas técnicos en planta. Esa experiencia nos permite abordar cada proyecto entendiendo no solo la tecnología, sino también las exigencias reales de producción, mantenimiento, seguridad y rentabilidad." },
+    "origin": { "label": "Nuestro origen", "title": "Todo empezó con un problema concreto.", "paragraphs": ["JSP comenzó en 2022 a partir de una necesidad detectada en una empresa fabricante de calzado: la aplicación de adhesivo se hacía a mano, con un consumo elevado de producto, dependencia del operario, variabilidad en la aplicación y exposición directa a adhesivos y disolventes.", "Para resolverlo desarrollamos GlueArm, un sistema robotizado de aplicación de adhesivo diseñado para trabajar en un entorno industrial real. La primera instalación aumentó la producción aproximadamente un 35 % y redujo el consumo de adhesivo cerca de un 50 %. Tras validar el sistema, se incorporaron nuevas unidades hasta alcanzar cuatro equipos instalados.", "Aquella experiencia confirmó nuestra forma de entender la automatización: partir de un problema concreto, estudiar el proceso en profundidad y desarrollar una solución que aporte resultados medibles."], "data": [{ "value": "≈+35 %", "label": "Producción" }, { "value": "≈−50 %", "label": "Adhesivo" }, { "value": "×4", "label": "Equipos instalados" }], "imageAlt": "GlueArm aplicando adhesivo en una instalación industrial" },
+    "services": { "label": "Qué hacemos", "title": "Del análisis del proceso a la solución funcionando.", "intro": "Diseñamos e integramos soluciones de robótica, automatización industrial y visión artificial para empresas que quieren mejorar su productividad, reducir trabajos manuales repetitivos y disponer de procesos más estables.", "items": ["Paletizado y despaletizado", "Manipulación de productos y materiales", "Aplicación automática de adhesivos", "Visión artificial e inspección de calidad", "Automatización de procesos industriales", "Integración de robots, maquinaria y sistemas de control"], "closing": "No nos limitamos a suministrar un robot. Analizamos el proceso completo, seleccionamos la tecnología adecuada y desarrollamos la integración necesaria para que la solución trabaje de forma fiable dentro de tu producción." },
+    "proximity": { "label": "Cercanía industrial", "title": "De Arnedo al norte industrial.", "text": "Nuestra base está en Arnedo, una de las principales zonas industriales de La Rioja y con una fuerte vinculación al sector del calzado. Trabajamos con empresas de La Rioja y de otras zonas industriales del norte de España, con trato directo, acompañamiento técnico y soluciones adaptadas a las necesidades de cada fábrica." },
+    "criterion": { "label": "Criterio", "title": "Automatizar no es instalar tecnología por instalarla.", "text": "Un proyecto debe resolver un problema real, ser viable técnicamente, tener sentido económico y poder mantenerse durante años. Por eso analizamos cada aplicación con una visión práctica y transparente, incluyendo sus limitaciones, riesgos y retorno esperado.", "quote": "Nuestro compromiso es proponer únicamente soluciones que consideremos técnicamente viables y que aporten un beneficio real al cliente." },
+    "cta": { "title": "¿Hablamos de tu proceso?", "text": "Trato directo con quien diseña y construye la solución. Te decimos en días si podemos mejorarlo.", "button": "Cuéntanos tu proceso" }
+  },
   "footer": {
-    "copyright": "© 2026 JSP Automation · España",
+    "copyright": "© 2026 JSP Automation · Arnedo, La Rioja",
     "note": "Robótica, visión artificial y automatización industrial"
   }
 }

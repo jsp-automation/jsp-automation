@@ -1482,6 +1482,12 @@ h3, .display-3 {
   font-weight: 600;
 }
 
+.method-link {
+  display: inline-flex;
+  margin-top: 28px;
+  color: var(--cyan-ink);
+}
+
 .case {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -1555,6 +1561,115 @@ h3, .display-3 {
   content: close-quote;
   color: var(--cyan);
 }
+
+/* Páginas editoriales: método y empresa */
+.editorial-page {
+  padding-top: 0;
+}
+
+.editorial-intro {
+  padding-bottom: 0;
+}
+
+.editorial-lead {
+  max-width: 34ch;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 1.25;
+}
+
+.method-detail {
+  padding-top: clamp(50px, 6vw, 80px);
+}
+
+.method-detail .steps {
+  margin-top: 0;
+}
+
+.commitments h2,
+.services h2,
+.prose-block h2 {
+  max-width: 16ch;
+}
+
+.editorial-list,
+.service-list {
+  margin-top: clamp(36px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+}
+
+.editorial-row {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
+  gap: clamp(20px, 5vw, 70px);
+  padding: 27px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.editorial-row h3 {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.editorial-row p,
+.company-origin p {
+  color: var(--mut);
+  font-size: 15px;
+}
+
+.company-origin {
+  padding-top: clamp(70px, 9vw, 120px);
+  padding-bottom: clamp(70px, 9vw, 120px);
+}
+
+.company-origin p + p {
+  margin-top: 14px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.service-item:nth-child(odd) {
+  padding-right: 28px;
+}
+
+.service-item:nth-child(even) {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+}
+
+.service-closing {
+  margin-top: 36px;
+}
+
+.criterion q {
+  display: block;
+  max-width: 38ch;
+  margin-top: 36px;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.8vw, 40px);
+  line-height: 1.35;
+  quotes: "\201C" "\201D";
+}
+
+.criterion q::before,
+.criterion q::after {
+  color: var(--cyan);
+}
+
+.criterion q::before { content: open-quote; }
+.criterion q::after { content: close-quote; }
 
 .cta-final {
   padding: clamp(60px, 9vw, 120px) 0 clamp(90px, 11vw, 140px);
@@ -1642,6 +1757,18 @@ h3, .display-3 {
 
   .step p {
     grid-column: 2;
+  }
+
+  .editorial-row,
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item:nth-child(odd),
+  .service-item:nth-child(even) {
+    border-left: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

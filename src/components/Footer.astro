@@ -1,14 +1,15 @@
 ---
 interface Props {
   note?: string;
+  copyright?: string;
 }
 
-const { note = 'Robótica, visión artificial y automatización industrial' } = Astro.props;
+const { note = 'Robótica, visión artificial y automatización industrial', copyright = '© 2026 JSP Automation · Arnedo, La Rioja' } = Astro.props;
 ---
 
 <footer class="site-footer">
   <div class="wrap foot">
-    <div>© 2026 JSP Automation · España</div>
+    <div>{copyright}</div>
     <div>{note}</div>
   </div>
 </footer>

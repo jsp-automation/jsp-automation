@@ -13,8 +13,8 @@ import glueImg from '../assets/provisional/glue2.jpg';
 const navItems = [
   { label: es.nav.soluciones, href: '/soluciones/' },
   { label: es.nav.proyectos, href: '#caso' },
-  { label: es.nav.metodo, href: '#metodo' },
-  { label: es.nav.empresa, href: '#' },
+  { label: es.nav.metodo, href: '/como-trabajamos/' },
+  { label: es.nav.empresa, href: '/empresa/' },
 ];
 ---
 
@@ -117,6 +117,7 @@ const navItems = [
           <span><b>{c.b}</b>{c.rest}</span>
         ))}
       </div>
+      <a class="plink method-link reveal" href="/como-trabajamos/">Ver el método completo <span class="arr">→</span></a>
     </section>
 
     <section class="wrap case" id="caso">
