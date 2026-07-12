@@ -1,0 +1,20 @@
+TAREA T8 — Reconstruir la homepage del sitio Astro según la maqueta v4 aprobada.
+
+FUENTE DE VERDAD: docs/fase-a/T4-mockup-home.html (maqueta v4 "continuidad"). IGNORA los blobs base64 de @font-face e imágenes (son solo para que la maqueta sea autocontenida) — las fotos están en src/assets/provisional/ (hero.jpg, cell.jpg, awp.jpg, glue2.jpg) y las fuentes van por npm. El script de "modo edición" de la maqueta NO se porta (es solo de la maqueta). Todo lo demás (estructura, CSS, textos, animaciones) debe portarse fielmente.
+
+CONTEXTO: el proyecto ya tiene scaffold (T6) y un sistema de componentes v3 (T7) que quedó DESFASADO por cambio de dirección de arte. La v4 es la vigente:
+- Página de DOS actos: ACTO I oscuro = una tarjeta gigante redondeada con margen sobre el lienzo claro, degradado continuo grafito a teal (tokens dk-a #0C0D10, dk-b #0D1B22, dk-c #0E242E), grano SVG overlay. ACTO II claro editorial (lienzo #F6F6F4 a #EFEFEC).
+- Tipografía: añade dependencia @fontsource/dm-serif-display (ÚNICA dependencia nueva permitida). Titulares display en DM Serif Display 400; el resto DM Sans.
+- Botones píldora (border-radius 999px) con degradado cian y flecha al hover; variante ghost para oscuro.
+- PROHIBIDO en la home: badges/pastillas de estado (Disponible/En desarrollo), franjas de datos bajo el hero, tiles de métricas gigantes, marquee. El usuario los vetó explícitamente.
+
+TRABAJO:
+1. Actualiza src/styles/global.css: nuevos tokens de lienzo (--canvas #F6F6F4, --canvas-2 #EFEFEC, --dk-a/b/c, --cyan-ink #177287, --line #E4E4E0), import de @fontsource/dm-serif-display, clases display serif, y las utilidades del mockup (pill, ghost, etc.).
+2. Header.astro: simplifícalo a la versión v4 — SIEMPRE sobre lienzo claro (fixed, blur, fondo rgba(246,246,244,.85)), sin lógica camaleón ni logo que cambia de color. Conserva menú móvil hamburguesa.
+3. Nuevos componentes: ProductRow.astro (fila editorial: h3 + descripción + flecha hover, grid como el mockup, SIN estado), GhostStatement.astro (declaración con texto fantasma parallax), FloatProduct.astro (imagen flotante rotada -2 grados con drop-shadow y parallax), Reel.astro (momento vídeo con play y nota), CaseSplit.astro (proyecto destacado claro con foto, métricas con filete cian y cita serif), StepList.astro (5 fases editoriales con hairlines y números serif).
+4. Reescribe src/pages/index.astro como la home v4 completa, en este orden: hero (hero.jpg integrada con opacidad .62 y degradados, titular serif 2 líneas con animación lift, sub, 2 píldoras) - statement (ghost "Primero, el proceso.") - float product (awp.jpg) - products (5 filas: AWP·40L, GlueArm, Paletizador Caótico IA, Despaletizado por Visión IA, Control de Calidad IA — textos exactos del mockup) - reel (cell.jpg) - fin del acto oscuro - método (5 fases) - caso GlueArm (glue2.jpg, métricas +25/-60/x4 con contador) - CTA final - footer. Copy EXACTO del mockup. Usa astro:assets Image para las fotos.
+5. Todo el copy de la home en src/i18n/es.json (ninguna cadena hardcodeada en el .astro).
+6. motion.ts: conserva lo existente; añade el parallax bajo demanda del ghost text y float product (patrón del mockup: un rAF por evento de scroll). prefers-reduced-motion sigue desactivando todo.
+7. Actualiza la página styleguide únicamente para que compile (componentes viejos sin uso pueden quedarse si no rompen; la limpieza vendrá después).
+
+VERIFICA Y REPORTA: npm install (nueva dep) y npm run build pasan; la home renderiza las secciones en el orden indicado; el HTML de index no contiene pastillas de estado ni dataline ni marquee; fotos optimizadas por astro:assets. Reporta árbol de cambios y salida de build. NO hagas commit.

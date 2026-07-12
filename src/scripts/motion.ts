@@ -231,6 +231,45 @@ function initPointClouds() {
   });
 }
 
+export function initV4Parallax() {
+  if (reducedMotion()) return;
+
+  const ghost = document.querySelector<HTMLElement>('[data-ghost]');
+  const float = document.querySelector<HTMLElement>('[data-float]');
+  if (!ghost && !float) return;
+
+  let pending = false;
+
+  const update = () => {
+    pending = false;
+    const viewportHeight = window.innerHeight;
+
+    if (ghost && ghost.parentElement) {
+      const rect = ghost.parentElement.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < viewportHeight) {
+        const center = (rect.top + rect.height / 2 - viewportHeight / 2) / viewportHeight;
+        ghost.style.transform = `translate(calc(-50% + ${(-center * 60).toFixed(1)}px), -50%)`;
+      }
+    }
+
+    if (float) {
+      const rect = float.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < viewportHeight) {
+        const center = (rect.top + rect.height / 2 - viewportHeight / 2) / viewportHeight;
+        float.style.transform = `translateY(${(center * 36).toFixed(1)}px)`;
+      }
+    }
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!pending) {
+      pending = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+  update();
+}
+
 export function init() {
   initHeader();
   if (initialized) return;
@@ -238,5 +277,6 @@ export function init() {
   initReveals();
   initCounters();
   initParallax();
+  initV4Parallax();
   initPointClouds();
 }

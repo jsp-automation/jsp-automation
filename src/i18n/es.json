@@ -1,12 +1,101 @@
 {
   "meta": {
-    "title": "JSP Automation — en construcción",
-    "description": "Sitio web de JSP Automation en construcción."
+    "title": "JSP Automation — Robótica, visión artificial y automatización industrial",
+    "description": "Diseñamos, fabricamos e instalamos soluciones robotizadas partiendo del proceso real de tu planta. Paletizado, despaletizado, visión artificial y control de calidad."
   },
-  "home": {
-    "title": "JSP Automation —",
-    "titleAccent": "en construcción",
-    "lead": "Sitio en construcción.",
-    "cta": "En construcción"
+  "nav": {
+    "soluciones": "Soluciones",
+    "proyectos": "Proyectos",
+    "metodo": "Cómo trabajamos",
+    "empresa": "Empresa",
+    "cta": "Cuéntanos tu proceso"
+  },
+  "hero": {
+    "eyebrow": "Robótica · Visión artificial · Automatización industrial",
+    "titleLine1": "Automatizamos lo que",
+    "titleLine2": "frena tu producción.",
+    "sub": "Diseñamos, fabricamos e instalamos soluciones robotizadas partiendo del proceso real de tu planta. Sin catálogos genéricos.",
+    "ctaPrimary": "Cuéntanos tu proceso",
+    "ctaSecondary": "Ver soluciones",
+    "imageAlt": "Robot colaborativo GlueArm trabajando integrado en la inyectora de un fabricante de calzado"
+  },
+  "statement": {
+    "ghost": "Primero, el proceso.",
+    "titlePre": "No vendemos robots.",
+    "titlePost": "Resolvemos",
+    "titleAccent": "procesos",
+    "lead": "Cada solución parte de un análisis real de tu línea. La adaptamos, la fabricamos y la instalamos el mismo equipo que después te da soporte.",
+    "traits": [
+      { "t": "Origen en planta", "p": "Conocemos los procesos desde dentro, no desde un pliego de condiciones." },
+      { "t": "Producto propio", "p": "Somos el fabricante: diseño, mecánica, visión y software, sin intermediarios." },
+      { "t": "Honestidad técnica", "p": "Estudiamos tu aplicación y te decimos en días si podemos mejorarla. Si no, también." }
+    ]
+  },
+  "floatProduct": {
+    "cap": "Celda Compacta AWP·40L — diseñada y fabricada por JSP",
+    "imageAlt": "Celda compacta de paletizado AWP·40L fabricada por JSP Automation"
+  },
+  "products": {
+    "titleLine1": "Productos propios,",
+    "titleLine2": "adaptados a tu línea.",
+    "lead": "Paletizado, despaletizado, visión y control de calidad. Cada sistema se adapta a tu proceso — no al revés.",
+    "items": [
+      { "name": "Celda Compacta AWP·40L", "desc": "Paletizado al final de tu línea: 40 kg, 10 ciclos/min, sin obras ni programación compleja." },
+      { "name": "GlueArm", "desc": "Encolado robotizado de plantillas con aplicador de diseño propio, integrado en la inyectora existente." },
+      { "name": "Paletizador Caótico IA", "desc": "Cajas de distintos formatos colocadas de forma óptima en tiempo real, con visión 2D/3D." },
+      { "name": "Despaletizado por Visión IA", "desc": "El robot ve el palet, entiende cómo viene y actúa. Con pallets reales, tal como llegan." },
+      { "name": "Control de Calidad IA", "desc": "Inspección del 100 % de la producción con cámaras industriales y modelos entrenados para calzado." }
+    ]
+  },
+  "reel": {
+    "kicker": "Vídeo · loop sin sonido",
+    "title": "GlueArm en producción real",
+    "note": "Imagen real · el vídeo definitivo llega con el Lote 1",
+    "imageAlt": "Célula encoladora GlueArm trabajando en el taller"
+  },
+  "method": {
+    "label": "Cómo trabajamos",
+    "titleLine1": "Proyectos por fases.",
+    "titleLine2": "Cobro por objetivos cumplidos.",
+    "lead": "Cada proyecto avanza por etapas con objetivos y puntos de validación acordados contigo. Cada hito se cumple antes de continuar.",
+    "steps": [
+      { "n": "01", "h": "Definición del proyecto", "p": "Objetivos, necesidades y criterios de aceptación acordados contigo." },
+      { "n": "02", "h": "Diseño e integración", "p": "Desarrollo de la solución técnica y adaptación a tu proceso real." },
+      { "n": "03", "h": "Instalación y puesta en marcha", "p": "Montaje, configuración y primeras pruebas supervisadas por JSP." },
+      { "n": "04", "h": "Ajustes en producción real", "p": "Optimización de ciclos y parámetros en tus condiciones reales." },
+      { "n": "05", "h": "Validación final del cliente", "p": "Aceptación según los objetivos acordados. El proyecto cierra aquí, no antes." }
+    ],
+    "claims": [
+      { "b": "La instalación no termina cuando se entrega:", "rest": " termina cuando funciona." },
+      { "b": "No vendemos maquinaria:", "rest": " vendemos soluciones funcionando." }
+    ]
+  },
+  "case": {
+    "label": "Proyecto destacado",
+    "title": "GlueArm, encolado robotizado de plantillas.",
+    "lead": "Brazo colaborativo con aplicador de diseño propio, montado sobre la inyectora existente del cliente. Sin obras y sin parar la producción durante la instalación.",
+    "data": [
+      { "count": 25, "prefix": "+", "suffix": "%", "label": "Producción" },
+      { "count": 60, "prefix": "−", "suffix": "%", "label": "Pegamento" },
+      { "static": "×4", "label": "Unidades desde 2022" }
+    ],
+    "quote": "La instalación no modifica la inyectora ni interrumpe la producción. El robot se integra en el flujo existente y empieza a trabajar desde el primer día.",
+    "imageAlt": "GlueArm encolando una plantilla dentro de la inyectora del cliente"
+  },
+  "cta": {
+    "label": "Contacto",
+    "title": "Cuéntanos tu proceso.",
+    "lead": "Te decimos en días si podemos mejorarlo. Estudio técnico-comercial sin compromiso.",
+    "button": "Empezar la conversación",
+    "note": "Lo revisa un ingeniero, no un comercial.",
+    "contacts": [
+      { "label": "Interlocutor directo", "value": "Juan Ignacio Pérez Domínguez" },
+      { "label": "Teléfono", "value": "+34 696 199 024" },
+      { "label": "Email", "value": "ingenieria@jsp-automation.es" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 JSP Automation · España",
+    "note": "Robótica, visión artificial y automatización industrial"
   }
 }

@@ -1,26 +1,158 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import es from '../i18n/es.json';
+
+import heroImg from '../assets/provisional/hero.jpg';
+import awpImg from '../assets/provisional/awp.jpg';
+import cellImg from '../assets/provisional/cell.jpg';
+import glueImg from '../assets/provisional/glue2.jpg';
+
+const navItems = [
+  { label: es.nav.soluciones, href: '#soluciones' },
+  { label: es.nav.proyectos, href: '#caso' },
+  { label: es.nav.metodo, href: '#metodo' },
+  { label: es.nav.empresa, href: '#' },
+];
 ---
 
 <Base title={es.meta.title} description={es.meta.description}>
-  <main class="min-h-dvh px-6 py-10 md:px-10">
-    <section class="mx-auto flex min-h-[calc(100dvh-5rem)] max-w-5xl items-center">
-      <div class="max-w-3xl">
-        <h1 class="text-5xl font-semibold leading-[1.02] text-ink md:text-7xl">
-          {es.home.title}
-          <span class="block text-cyan">{es.home.titleAccent}</span>
-        </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-ink-soft md:text-xl">
-          {es.home.lead}
-        </p>
-        <button
-          type="button"
-          class="mt-9 inline-flex min-h-12 items-center justify-center rounded-md bg-cyan px-6 text-base font-semibold text-dark transition hover:bg-cyan-hi focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-deep"
-        >
-          {es.home.cta}
-        </button>
+  <Header navItems={navItems} ctaLabel={es.nav.cta} ctaHref="#contacto" />
+
+  <!-- ACTO I : mundo oscuro continuo -->
+  <div class="act-dark" id="top">
+    <section class="hero">
+      <div class="hero-media">
+        <Image src={heroImg} alt={es.hero.imageAlt} widths={[760, 1200, 1298]} sizes="100vw" loading="eager" fetchpriority="high" quality={78} />
+      </div>
+      <div class="hero-inner">
+        <div class="wrap">
+          <div class="hero-eyebrow">{es.hero.eyebrow}</div>
+          <h1>
+            <span class="l"><i>{es.hero.titleLine1}</i></span>
+            <span class="l"><i>{es.hero.titleLine2}</i></span>
+          </h1>
+          <p class="hero-sub">{es.hero.sub}</p>
+          <div class="hero-cta">
+            <a class="pill" href="#contacto">{es.hero.ctaPrimary} <span class="arr">→</span></a>
+            <a class="pill pill-ghost" href="#soluciones">{es.hero.ctaSecondary}</a>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
+
+    <section class="statement">
+      <div class="ghost" aria-hidden="true" data-ghost>{es.statement.ghost}</div>
+      <div class="wrap statement-inner reveal">
+        <h2>{es.statement.titlePre}<br>{es.statement.titlePost} <span class="k">{es.statement.titleAccent}</span>.</h2>
+        <p>{es.statement.lead}</p>
+        <div class="traits">
+          {es.statement.traits.map((tr) => (
+            <div class="trait"><div class="t">{tr.t}</div><p>{tr.p}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="float-product reveal">
+      <div class="img-wrap" data-float>
+        <Image src={awpImg} alt={es.floatProduct.imageAlt} widths={[520, 800, 1000]} sizes="(max-width: 720px) 72vw, 620px" quality={80} />
+      </div>
+      <div class="cap">{es.floatProduct.cap}</div>
+    </div>
+
+    <section class="products" id="soluciones">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>{es.products.titleLine1}<br>{es.products.titleLine2}</h2>
+          <p class="lead">{es.products.lead}</p>
+        </div>
+        {es.products.items.map((p) => (
+          <div class="prow reveal">
+            <h3>{p.name}</h3>
+            <p>{p.desc}</p>
+            <span class="go" aria-hidden="true">→</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="reel reveal">
+        <Image src={cellImg} alt={es.reel.imageAlt} widths={[760, 1024]} sizes="(max-width: 1200px) 100vw, 1160px" quality={78} />
+        <div class="shade"></div>
+        <div class="play" aria-hidden="true"></div>
+        <div class="cap"><span>{es.reel.kicker}</span><b>{es.reel.title}</b></div>
+      </div>
+      <div class="reel-note reveal">{es.reel.note}</div>
+    </div>
+    <div class="tail"></div>
+  </div>
+
+  <!-- ACTO II : lienzo claro editorial -->
+  <div class="act-light">
+    <section class="wrap method" id="metodo">
+      <div class="reveal">
+        <div class="sec-label">{es.method.label}</div>
+        <h2>{es.method.titleLine1}<br>{es.method.titleLine2}</h2>
+        <p class="lead">{es.method.lead}</p>
+      </div>
+      <div class="steps">
+        {es.method.steps.map((s) => (
+          <div class="step reveal"><span class="n">{s.n}</span><h3>{s.h}</h3><p>{s.p}</p></div>
+        ))}
+      </div>
+      <div class="method-claims reveal">
+        {es.method.claims.map((c) => (
+          <span><b>{c.b}</b>{c.rest}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="wrap case" id="caso">
+      <div class="media reveal">
+        <Image src={glueImg} alt={es.case.imageAlt} widths={[600, 884]} sizes="(max-width: 860px) 100vw, 620px" quality={80} />
+      </div>
+      <div class="reveal">
+        <div class="sec-label">{es.case.label}</div>
+        <h2>{es.case.title}</h2>
+        <p class="lead">{es.case.lead}</p>
+        <div class="case-data">
+          {es.case.data.map((d) => (
+            <div class="cd">
+              {'count' in d && d.count !== undefined
+                ? <b data-count={d.count} data-prefix={d.prefix} data-suffix={d.suffix}>{d.prefix}{d.count}{d.suffix}</b>
+                : <b>{d.static}</b>}
+              <span>{d.label}</span>
+            </div>
+          ))}
+        </div>
+        <q>{es.case.quote}</q>
+      </div>
+    </section>
+
+    <section class="wrap cta-final" id="contacto">
+      <div class="reveal">
+        <div class="sec-label">{es.cta.label}</div>
+        <h2>{es.cta.title}</h2>
+        <p class="lead">{es.cta.lead}</p>
+        <a class="pill" href="#">{es.cta.button} <span class="arr">→</span></a>
+        <div class="cta-note">{es.cta.note}</div>
+      </div>
+      <div class="contact-row reveal">
+        {es.cta.contacts.map((c) => (
+          <div class="ci"><span>{c.label}</span><b>{c.value}</b></div>
+        ))}
+      </div>
+    </section>
+
+    <Footer note={es.footer.note} />
+  </div>
+
+  <script>
+    import { init } from '../scripts/motion';
+    init();
+  </script>
 </Base>

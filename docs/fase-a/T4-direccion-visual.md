@@ -1,4 +1,14 @@
-# T4 — Dirección visual (v3 — APROBADA)
+# T4 — Dirección visual (v4 — propuesta de continuidad, pendiente de aprobación)
+
+> **v4 (09/07/2026):** el cliente rechazó la v3 construida como "bloques de color alternos exportados de un PDF" y pidió continuidad tipo rob.co. Se estudió rob.co en navegador real y se destiló su sistema, aplicado en `T4-mockup-home.html` (label v4-continuidad-robco):
+> 1. **Dos actos, no alternancia.** La página entera son solo 2 mundos: ACTO I oscuro (hero + declaración + productos + vídeo) como UNA tarjeta gigante redondeada insertada en el lienzo, con deriva gradual de tono grafito → azul-verdoso profundo (nunca cambios bruscos); ACTO II claro editorial (método + caso + CTA + footer) sobre lienzo continuo.
+> 2. **DM Serif Display** (misma superfamilia que DM Sans) para titulares display — elegancia editorial estilo RobCo manteniendo coherencia de marca. DM Sans para todo lo demás.
+> 3. **Prohibidos los "cartelones" del PDF:** nada de tiles cian gigantes, bandas negras de stats ni tarjetas-póster. Las métricas son líneas de datos discretas con hairlines; los productos son filas editoriales con hover, no tarjetas.
+> 4. **Objetos flotantes con sombra profunda** (foto de producto AWP·40L rotada -2° flotando, estilo RobCo con sus tablets), texto fantasma gigante de fondo ("Primero, el proceso."), botones píldora.
+> 5. Grano global, blur en cristal solo puntual, foto del hero integrada con opacidad y degradados dentro del acto oscuro (no full-bleed separado).
+> La v3 (abajo) queda superada en layout; siguen vigentes su política de fotos reales, motion (reveals/counters/parallax bajo demanda, reduced-motion) y honestidad de badges.
+
+# (v3 — histórico)
 
 > **Estado final:** dirección aprobada por el cliente el 09/07/2026 sobre la maqueta v3 inmersiva (`T4-mockup-home.html`, publicada en https://claude.ai/code/artifact/315634e8-f6be-4ee2-ac4c-6659dde77cf4). Principios añadidos en v3 que se convierten en norma para la construcción (T6-T8):
 > 1. **La fotografía manda:** hero a pantalla completa (100svh) con foto real + texto superpuesto; secciones clave a sangre completa. Nada de layout "de diapositiva" (tarjetas de texto apiladas y centradas).
